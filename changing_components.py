@@ -36,15 +36,15 @@ def initialize_session_state():
             'Minimum Effect Size Q6': [],
             'Minimum Effect Size Q7': [],
             'Minimum Effect Size Q8': [],
-            #'Minimum Effect Size Q10': [],
+            'Minimum Effect Size Q9': [],
             'Cost-Benefit Ratio': [],
-            'Risk Aversion': [],
-            'RCT Q1': [],
-            'RCT Q2': [],
-            'RCT Q3': [],
-            'RCT Q4': [],
-            'RCT Q5': [],
-            'RCT Q6': []
+            'Risk Aversion': []
+            #'RCT Q1': [],
+            #'RCT Q2': [],
+            #'RCT Q3': [],
+            #'RCT Q4': [],
+            #'RCT Q5': [],
+            #'RCT Q6': []
             }
     
 def safe_var(key):
@@ -115,7 +115,7 @@ def effect_size_question(jsonfile_name):
     col1, _ = st.columns(2)
     with col1:
         st.markdown(jsonfile_name['effect_size'])
-        st.number_input('Click to increase and decrease the counter or directly insert the number.', min_value=0, max_value=10000, key = jsonfile_name['num_input_question'])
+        st.text_input("Please insert a number or write 'I don't know'.", key = jsonfile_name['num_input_question'])
 
 def RCT_questions():
     st.subheader('Questions on RCTs Evaluation')
@@ -134,9 +134,9 @@ def RCT_questions():
     st.write('- Do you think allocating grants randomly amongst equally eligible potential beneficiaries is ethical? Did you think so before engaging in the RCT?')
     st.text_input('Please, write about your experience (max 500 characters).', max_chars=500, key = 'RCT_question6')
 
-def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updated_bins_question_3_df, updated_bins_question_4_df, updated_bins_question_5_df, updated_bins_question_6_df, updated_bins_question_7_df, updated_bins_question_8_df, updated_bins_question_9_df, updated_bins_question_10_df):
+def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updated_bins_question_3_df, updated_bins_question_4_df, updated_bins_question_5_df, updated_bins_question_6_df, updated_bins_question_7_df, updated_bins_question_8_df, updated_bins_question_9_df):
 
-    updated_bins_list = [updated_bins_question_1_df, updated_bins_question_2_df, updated_bins_question_3_df, updated_bins_question_4_df, updated_bins_question_5_df, updated_bins_question_6_df, updated_bins_question_7_df, updated_bins_question_8_df, updated_bins_question_9_df, updated_bins_question_10_df]
+    updated_bins_list = [updated_bins_question_1_df, updated_bins_question_2_df, updated_bins_question_3_df, updated_bins_question_4_df, updated_bins_question_5_df, updated_bins_question_6_df, updated_bins_question_7_df, updated_bins_question_8_df, updated_bins_question_9_df]
     # Extracting the first row of each transposed dataframe as column names
     #for i, transposed_df in enumerate(transposed_bins_list):
     #    transposed_df.columns = column_names_list[i]
@@ -180,16 +180,16 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     MIN_EFF_SIZE_Q6 = 'Minimum Effect Size Q6'
     MIN_EFF_SIZE_Q7 = 'Minimum Effect Size Q7'
     MIN_EFF_SIZE_Q8 = 'Minimum Effect Size Q8'
-    #MIN_EFF_SIZE_Q9 = 'Minimum Effect Size Q9'
+    MIN_EFF_SIZE_Q9 = 'Minimum Effect Size Q9'
     #MIN_EFF_SIZE_Q10 = 'Minimum Effect Size Q10'
     COST_BENEFIT_RATIO = 'Cost-Benefit Ratio'
     RISK_AVERSION = 'Risk Aversion'
-    RCT_Q1 = 'RCT Q1'
-    RCT_Q2 = 'RCT Q2'
-    RCT_Q3 = 'RCT Q3'
-    RCT_Q4 = 'RCT Q4'
-    RCT_Q5 = 'RCT Q5'
-    RCT_Q6 = 'RCT Q6'
+    #RCT_Q1 = 'RCT Q1'
+    #RCT_Q2 = 'RCT Q2'
+    #RCT_Q3 = 'RCT Q3'
+    #RCT_Q4 = 'RCT Q4'
+    #RCT_Q5 = 'RCT Q5'
+    #RCT_Q6 = 'RCT Q6'
 
     data[USER_FULL_NAME].append(safe_var('user_full_name'))
     data[USER_POSITION].append(safe_var('user_position'))
@@ -203,16 +203,16 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     data[MIN_EFF_SIZE_Q6].append(safe_var('num_input_question6'))
     data[MIN_EFF_SIZE_Q7].append(safe_var('num_input_question7'))
     data[MIN_EFF_SIZE_Q8].append(safe_var('num_input_question8'))
-    #data[MIN_EFF_SIZE_Q9].append(safe_var('num_input_question9'))
+    data[MIN_EFF_SIZE_Q9].append(safe_var('num_input_question9'))
     #data[MIN_EFF_SIZE_Q10].append(safe_var('num_input_question10'))
     data[COST_BENEFIT_RATIO].append(safe_var('cost_benefit'))
     data[RISK_AVERSION].append(safe_var('risk_aversion'))
-    data[RCT_Q1].append(safe_var('RCT_question1'))
-    data[RCT_Q2].append(safe_var('RCT_question2'))
-    data[RCT_Q3].append(safe_var('RCT_question3'))
-    data[RCT_Q4].append(safe_var('RCT_question4'))
-    data[RCT_Q5].append(safe_var('RCT_question5'))
-    data[RCT_Q6].append(safe_var('RCT_question6'))
+    #data[RCT_Q1].append(safe_var('RCT_question1'))
+    #data[RCT_Q2].append(safe_var('RCT_question2'))
+    #data[RCT_Q3].append(safe_var('RCT_question3'))
+    #data[RCT_Q4].append(safe_var('RCT_question4'))
+    #data[RCT_Q5].append(safe_var('RCT_question5'))
+    #data[RCT_Q6].append(safe_var('RCT_question6'))
 
     st.session_state['data'] = data
     
@@ -222,6 +222,7 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
 
     concatenated_df = pd.concat([personal_data_df, questions_df.set_index(personal_data_df.index), min_eff_df.set_index(personal_data_df.index)], axis=1)
     
+    
     st.session_state['submit'] = True
     
     #save data to google sheet
@@ -230,15 +231,16 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     creds = ServiceAccountCredentials.from_json_keyfile_dict(secrets_to_json(), scope)
     client = gspread.authorize(creds)
  
-    sheet = client.open("Survey answers: Romania Case").sheet1
+    sheet = client.open("EEnergy_Efficiency_Survey_Data").sheet1
 
     column_names_list = concatenated_df.columns.tolist()
     #column_names = sheet.append_row(column_names_list)
 
     sheet_row_update = sheet.append_rows(concatenated_df.values.tolist()) #.values.tolist())
+    st.write(st.secrets['folder_id'])
     
     #Navigate to the folder in Google Drive. Copy the Folder ID found in the URL. This is everything that comes after “folder/” in the URL.
-    backup_sheet = client.create(f'Backup_{data[USER_FULL_NAME]}_{datetime.now()}', folder_id='1WTHKA2QT-1MDj0PpV5YX_Yboxf4pniJ9').sheet1
+    backup_sheet = client.create(f'Backup_{data[USER_FULL_NAME]}_{datetime.now()}', folder_id= secrets_to_json()['folder_id']).sheet1
     backup_sheet = backup_sheet.append_rows(concatenated_df.values.tolist()) #(new_bins_df.iloc[:2].values.tolist())
     #backup_sheet.share('', perm_type = 'user', role = 'writer')
 

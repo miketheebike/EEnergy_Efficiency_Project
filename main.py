@@ -50,7 +50,6 @@ if st.session_state['consent']:
     q7_config = config['question7']
     updated_bins_question_7_df, percentage_difference7, num_bins7 = create_question(q7_config)
     effect_size_question7 = effect_size_question(q7_config)
-    
 
     q8_config = config['question8']
     updated_bins_question_8_df, percentage_difference8, num_bins8 = create_question(q8_config)
@@ -58,21 +57,22 @@ if st.session_state['consent']:
 
     q9_config = config['question9']
     updated_bins_question_9_df, percentage_difference9, num_bins9 = create_question(q9_config)
-
-    _, col2, _, _ = st.columns(4)
-    with col2:
-        st.image("SatSunGraph.png", width = 700)
-    st.write("Saturday and Sunday temperatures in Washington DC for each weekend in 2022. As we might expect, there is a strong correlation between the temperature on a Saturday and on the Sunday, since some parts of the year are hot, and others colder. The correlation here is 0.88.")
+    effect_size_question9 = effect_size_question(q9_config)
     
-    q10_config = config['question10']
-    updated_bins_question_10_df, percentage_difference10, num_bins10 = create_question(q10_config)    
-
+    #_, col2, _, _ = st.columns(4)
+    #with col2:
+    #    st.image("SatSunGraph.png", width = 700)
+    #st.write("Saturday and Sunday temperatures in Washington DC for each weekend in 2022. As we might expect, there is a strong correlation between the temperature on a Saturday and on the Sunday, since some parts of the year are hot, and others colder. The correlation here is 0.88.")
+    
+    #q10_config = config['question10']
+    #updated_bins_question_10_df, percentage_difference10, num_bins10 = create_question(q10_config)    
+    
     percentage_differences = [percentage_difference1, percentage_difference2] #, percentage_difference3, percentage_difference4, percentage_difference5
     updated_bins_list = [updated_bins_question_1_df, updated_bins_question_2_df]#, updated_bins_question_3_df, updated_bins_question_4_df, updated_bins_question_5_df
     
     
-    st.subheader("Question 11 - Cost/Benefit Ratio")
-    st.write("In simple terms, a cost-benefit ratio is used to compare the costs of an action or project against the benefits it delivers. For instance, if a program costs €100.000 and the monetized value of its benefits is €150.000, the cost-benefit ratio would be 1:1.5. This means that for every euro spent, the program delivers one and a half euro in benefits. A higher ratio indicates greater efficiency and value for money. This question prompts to consider the efficiency and economic justification for scaling a program, ensuring that the decision aligns with both fiscal responsibility and the desired impact.  \nAt what cost-benefit ratio would you consider scaling a program?  \nConsider “benefits” that occurred after 2 years of running the program and “costs” as the total expenses incurred to implement, operate, and maintain a program or project (including administration and overhead costs).")
+    st.subheader("Question 10 - Cost/Benefit Ratio")
+    st.write("In simple terms, a cost-benefit ratio is used to compare the costs of a project against the benefits it delivers. For instance, if a program costs €100.000 and the monetized value of its benefits is €150.000, the cost-benefit ratio would be 1:1.5. This means that for every euro spent, the program delivers one and a half euro in benefits. A higher ratio indicates greater efficiency and value for money. This question prompts to consider the efficiency and economic justification for scaling a program, ensuring that the decision aligns with both fiscal responsibility and the desired impact. At what cost-benefit ratio would you consider scaling the EEnergy Efficiency Project?\n Consider “benefits” that occurred after two years of running the program and “costs” as the total expenses incurred to implement, operate, and maintain a program or project (including administration and overhead costs).")
     
     col1, _= st.columns(2)
     with col1:
@@ -80,20 +80,19 @@ if st.session_state['consent']:
         cost_benefit_list = [f"1:{round(i, 1)}" for i in np.arange(0.6, 3.1, .2)]
         st.select_slider("Please move the slider to indicate your preference.", cost_benefit_list, key = "cost_benefit")
 
-    st.subheader("Question 12 - Risk Aversion")
+    st.subheader("Question 11 - Risk Aversion")
     st.write("Rate your willingness to take risks in general on a 10-point scale, with 1 completely unwilling and 10 completely willing.")
 
     col1, _= st.columns(2)
     with col1:   
         st.slider("Please move the slider to indicate your preference.", 1, 10, key= "risk_aversion")
 
-    if st.session_state['professional_category'] in ['Government Official/Donor', 'Program Implementer/Practitioner']:
-        RCT_questions() 
+    #if st.session_state['professional_category'] in ['Government Official/Donor', 'Program Implementer/Practitioner']:
+        #RCT_questions() 
 
-    
     # Submission button + saving data 
     if all(percentage == 0 for percentage in percentage_differences):
-        submit = st.button("Submit", on_click = add_submission, args = ([updated_bins_question_1_df, updated_bins_question_2_df, updated_bins_question_3_df, updated_bins_question_4_df, updated_bins_question_5_df, updated_bins_question_6_df, updated_bins_question_7_df, updated_bins_question_8_df, updated_bins_question_9_df, updated_bins_question_10_df]))
+        submit = st.button("Submit", on_click = add_submission, args = ([updated_bins_question_1_df, updated_bins_question_2_df, updated_bins_question_3_df, updated_bins_question_4_df, updated_bins_question_5_df, updated_bins_question_6_df, updated_bins_question_7_df, updated_bins_question_8_df, updated_bins_question_9_df]))
 
     if st.session_state['submit']:
         st.success(f"Thank you for completing the Survey on {config['header']['survey_title']}!")

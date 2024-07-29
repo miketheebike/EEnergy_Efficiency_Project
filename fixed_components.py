@@ -31,11 +31,12 @@ def personal_information():
     with col1:
         st.text_input("Please, enter your full name and surname:", key = 'user_full_name')
         st.text_input("Please, enter your working title:", key = 'user_position')
-        st.selectbox('Please, specify your professional category:', ('Government Official/Donor', 'Program Implementer/Practitioner', 'Researcher'), key="professional_category")
-        st.number_input('Please, insert the years of experience you have working on digitalization topics:', min_value= 0, max_value= 70, key = 'years_of_experience')
+        st.selectbox('Please, specify your professional category:', ('Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor', 'Entrepreneur/Firm Representative'), key="professional_category")
+        st.number_input('Please, insert the years of experience you have working on energy efficiency:', min_value= 0, max_value= 70, key = 'years_of_experience')
 
 def secrets_to_json():
     return {
+        "folder_id": st.secrets["folder_id"],
         "type": st.secrets["type"],
         "project_id": st.secrets["project_id"],
         "private_key_id": st.secrets["private_key_id"],
@@ -46,20 +47,18 @@ def secrets_to_json():
         "token_uri": st.secrets["token_uri"],
         "auth_provider_x509_cert_url": st.secrets["auth_provider_x509_cert_url"],
         "client_x509_cert_url": st.secrets["client_x509_cert_url"],
-        "universe_domain": st.secrets["universe_domain"]
+        "universe_domain": st.secrets["universe_domain"],
+        
     }
 
 # EXAMPLE 
 
 TITLE_INSTRUCTIONS = '''Instructions'''
 
-SUBTITLE_INSTRUCTIONS = '''This example is designed to help you understanding the survey question format and how to effectively respond to inquiries about the outcomes of participating in the North East Romania Digitalization Program.\\
-    For each question, you have a table with intervals, like the one below. Please allocate probabilities, writing the number in the corresponding cell, based on the likelihood that you think a specific event will happen, as shown in the example table. You cannot allocate more than 100%.  \\
-    As an example, suppose we ask your beliefs of what is going to be the max temperature in Celsius degrees in your city/town tomorrow, it's summer and the weather forecast predicts heavy rain in the morning. 
-      
-    '''
-CAPTION_INSTRUCTIONS = '''As illustrated in the table, you predicted that there's a 45% chance of having 25 Celsius degrees, 20% chance of having 26 Celsius degrees and so on. \\
-   The bar graph shows the distribution of the probabilities assigned to the different temperatures.  '''
+SUBTITLE_INSTRUCTIONS = '''This example is designed to help you understand how to effectively respond to this survey. \\
+For each question, you have a table with two columns. Please allocate probabilities based on the likelihood that you think a specific event will happen under the "Probability" column. The plot next to it will show the distribution of your answers. As an example, suppose we asked about your beliefs regarding tomorrow's maximum temperature in degrees Celsius in your city or town.'''
+
+CAPTION_INSTRUCTIONS = '''In this case, your prediction indicates a 45\% chance of the maximum temperature reaching 25 degrees Celsius, 20\% chance of it reaching 26 degrees Celsius, and so on.'''
 
 def instructions():
 

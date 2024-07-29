@@ -1,55 +1,50 @@
 {
     "header": {
-      "survey_title": "Foundational Digital Transformation in North-East Romania",
-      "survey_description": "*Please be advised that this survey is resource-intensive and demands significant RAM for optimal performance. To avoid potential slowdowns, ensure all open windows and background programs are closed. Additionally, a stable internet connection is necessary for smooth operation.* \n\nThe North-East Regional Development Agency - Managing Authority for North-East RP (2021-2027) - has partnered with the World Bank and leading experts from London Business School to investigate the effectiveness of the North East Romania Digitalization Program by rigorously evaluating the adoption of digital technologies by small- and medium-sized enterprises (SMEs).\n\nThe study sample consists of 1,038 eligible firms, characterized by an average profit of approximately 695,000 RON (around $146,000 USD), and an average workforce of 14 employees. These firms have an average Digital Economy and Society Index (DESI) score of 4.3 out of 12, indicating relatively low digitalization. Key digitalization aspects measured by DESI include widespread use of connected mobile devices, high-speed internet connections, significant internet use among employees, active social media presence, website ownership, electronic invoicing, smartphone usage, paid internet advertising, complex web functionalities, cloud computing, and notable e-commerce sales. Sector-wise, 18.8% of firms are in Wholesale and Retail Trade, repair of Motor Vehicles, followed by 16% in Professional, Scientific, and Technical Activities, 12% in Manufacturing, 11.4% in Human Health and Social Work Activities, and 11% in Construction, with other sectors having less representation. Geographically, only a small fraction of these firms (9.3%) view Europe as their marketplace, and an even smaller percentage (4.4%) consider their market to be global.\n\nThe program is designed to provide financial assistance to eligible SMEs, facilitating their acquisition of ICT hardware, development or adaptation of software applications/licenses, acquisition of AI systems, website development, and enhancement of IT infrastructure.\n\nBy comparing firms selected to participate in the program to those not selected to participate in a random assignment process, we seek to establish causal relationships between digitalization and its corresponding outcomes, while also distinguishing the effects for various types of firms.\n\nNon-refundable financial support will be provided to eligible SMEs, with a maximum project contribution of 90% of the eligible investment value.  \nTotal financial allocation is of 51.4 millions Euros and is carried out by launching calls for projects (min 15.000 Euros, max 100.000 Euros per firm).  \nThe focus is on increasing digital intensity, supporting the use of digital tools, equipment, and services by creating internet pages, digital promotion, cloud hosting services, e-commerce, digitalization of communication with clients, data collection, buying ICT hardware, and developing or adapting software applications/licenses.\n\nIn the following questions you will be asked what you think it is the likely impact of the program for the firms that are offered the intervention, compared to those that were not offered the intervention. It is the effect of BEING OFFERED the full program, regardless of whether or not a firm decides to participate, which is called, in technical terms, the intention-to-treat effect (ITT).\n\nYour opinion matters and we'd like to thank you with a gift. To show our appreciation for your time and honest feedback, we're offering a chance to win an Amazon voucher. Upon a careful completion of the survey, you'll be entered into a draw to win an Amazon voucher worth [value of the voucher]. Please think carefully about your answers, your perspective can make a significant difference!"
+      "survey_title": "Expectations of Impacts of the EEnergy Efficiency Project ",
+      "survey_description": "*Please be advised that this survey is resource-intensive and demands significant RAM for optimal performance. To avoid potential slowdowns, ensure all open windows and background programs are closed. Additionally, a stable internet connection is necessary for smooth operation.*  \n\nThe EENergy Efficiency project has been funded by the EU's Single Market Program (SMP) to support Small and Medium Enterprises (SMEs) in improving their energy efficiency performance. \nAll eligible 1,397 EENergy applicants receive support from a sustainability advisor with 703 of them being selected in a lottery to receive grants of up to 10.000 \u20AC to finance the implementation of their energy efficiency action plans. This direct financial support aims to achieve energy efficiency performance improvements through investments in technological solutions, specialized consultancy, and/or upskilling expertise.  \n\nThe program is part of a pilot study, in which the DG GROW aims to better understand the effectiveness of the financial grants provided. For this purpose, an impact evaluation is being conducted alongside the program implementation.  \n\nWith the following questions the evaluation team would like to better understand your beliefs regarding the average impact of receiving the 10.000 \u20AC grant, compared to receiving standard support from sustainability advisors. The team would appreciate if you could take time to fill it out.  \n\nThank you for your time and collaboration!"
     },
 
     "question1": {
       "question_number": "Question 1",
       "key_form": "key_form1",
-      "title_question": "Question 1 - Internally Focused Digitalization Tools",
-      "subtitle_question": "On average, what will be the difference in percentage points (p.p) of the of internally focused digitalization tools (listed below) adopted in the SMEs selected for the program after two years since receiving the money compared to non-selected SMEs?  \nPlease provide your answer in percentage points (p.p.). For example, imagine that 100% SMEs selected will adopt 15 internally focused digitalization tools and the non-selected will adopt 10 internally focused digitalization tools, then the difference is 50 p.p. These technologies do not have to be directly related to the budget used for this program in the case of selected SMEs.  \n The internally focused digitalization tools include: Computers with Internet access, Cloud Computing, Automation Software, Internal Communication Platforms and Data Analytics.  \n _Please allocate the probabilities in the cells corresponding to your beliefs._",
-      "column_1": "Percentage Points Difference",
+      "title_question": "Question 1 - Annual kWh Consumption ",
+      "subtitle_question": "On average, how much do you think the grant will impact the quantity of annual kWh consumption after two years for EEnergy Cash Winners, compared to EENergy Standard group?  \nBe aware that the values in the table correspond to percentage points (p.p.). *Percentage points are different from percentages.* Suppose that companies before the grant consumed 20% of energy. If after two years they drop to 10%, this is a 50% decrease, but only a 10 p.p. decrease.  \n_Please allocate the probabilities in the cells corresponding to your beliefs, they should add to 100%._ ",
+      "column_1": "Percentage Points Change",
       "column_2": "Probabilities",
-      "minor_value": "0",
-      "min_value_graph": 0,
-      "max_value_graph": 100,
-      "step_size_graph": 10,
-      "major_value": "100",
+      "minor_value": "<-15.0",
+      "min_value_graph": -15,
+      "max_value_graph": 15,
+      "step_size_graph": 5,
+      "major_value": ">15",
       "key": "data_editor1",
-      "title_x_axis": "Annual Net Profit",
-      "title_y_axis": "Probabilities",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question1",
-      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up this program to more firms? Express your answer in percentage points, e.g. if you would want the adoption of new internally focused digitalization tools to increase by at least X%, you should give X as your answer."
-    },
+      "effect_size": "- What would be the minimum effect size you would want to see to consider scaling up the EEnergy Efficiency Project to more firms? Express your answer in percentage points, e.g. if you would want the annual consumption of energy to change by at least X% against the standard group, you should give X as your answer."},
 
     "question2": {
       "question_number": "Question 2",
       "key_form": "key_form2",
-      "title_question": "Question 2 - Externally Focused Digitalization Tools",
-      "subtitle_question": "On average, what will be the difference in percentage points of the percentage of externally focused digitalization tools (listed below) adopted in the SMEs selected for the program after two years since receiving the money compared to non-selected SMEs?  \nFor example, if you think that 100% SMEs selected will adopt 15 externally focused digitalization tools and the non-selected will adopt 10 internally focused digitalization tools, then the difference is 50 p.p; these technologies does not have not be directly related to the budget used for this program in the case of selected SMEs.  \nThe externally focused digitalization tools include: E-commerce Platforms, Digital Marketing Tools, Customer Relationship Management (CRM) Software, Social Media Engagement Tools and Electronic Invoices.  \n _Please allocate the probabilities in the cells corresponding to your beliefs._",
-      "column_1": "Percentage Points Difference",
+      "title_question": "Question 2 - Annual Renewable Energy Consumption",
+      "subtitle_question": "On average, how much do you think the grant would impact the annual consumption of renewable energy after two years for EEnergy Cash Winners, compared to EENergy Standard group? \n_Please allocate the probabilities in the cells corresponding to your beliefs, they should add to 100%._",
+      "column_1": "Percentage Points Change",
       "column_2": "Probabilities",
-      "minor_value": "0",
-      "min_value_graph": 0,
-      "max_value_graph": 100,
-      "step_size_graph": 10,
-      "major_value": "100",
+      "minor_value": "<-15.0",
+      "min_value_graph": -15,
+      "max_value_graph": 15,
+      "step_size_graph": 5,
+      "major_value": ">15",
       "key": "data_editor2",
-      "title_x_axis": "Annual Net Profit",
-      "title_y_axis": "Probabilities",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question2",
-      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up this program to more firms? Express your answer in percentage points, e.g. if you would want the adoption of new externally focused digitalization tools to increase by at least X%, you should give X as your answer."
+      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up the EEnergy Efficiency Project to more firms? Express your answer in percentage points, e.g. if you would want the annual consumption of renewable energy to change by at least X%, you should give X as your answer."
     },
 
     "question3": {
       "question_number": "Question 3",
       "key_form": "key_form3",
-      "title_question": "Question 3 - New Customers Acquisition",
-      "subtitle_question": "On average, how much do you think that the total number of new customers would increase in the SMEs selected for the program via the RCT method after two years since firms received the money, compared to non-beneficiaries firms from the comparison group?  \n _Please allocate the probabilities in the cells corresponding to your beliefs._",
-      "column_1": "Percentage Points of Newly Adopted Costumers",
+      "title_question": "Question 3 - Solar Energy Installation",
+      "subtitle_question": "On average, how much do you think the grant would impact the likelihood of installing solar/photovoltaic panels after two years for EEnergy Cash Winners, compared to EENergy Standard group? _Please allocate the probabilities in the cells corresponding to your beliefs, they should add to 100%._",
+      "column_1": "Percentage Points Change",
       "column_2": "Probabilities",
       "minor_value": "<-15.0",
       "min_value_graph": -15,
@@ -57,19 +52,17 @@
       "step_size_graph": 5,
       "major_value": ">15",
       "key": "data_editor3",
-      "title_x_axis": "Annual Net Profit",
-      "title_y_axis": "Probabilities",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question3",
-      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up this program to more firms? Express your answer in percentage points, e.g. if you would want the increment of customers outside Romania's borders to increase by at least X%, you should give X as your answer."
+      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up the EEnergy Efficiency Project to more firms? Express your answer in percentage points, e.g. if you would want the likelihood of installing solar/photovoltaic panels to change by at least X% against the standard group, you should give X as your answer."
     },
 
     "question4": {
       "question_number": "Question 4",
       "key_form": "key_form4",
-      "title_question": "Question 4 - Annual Revenue",
-      "subtitle_question": "On average, how much do you think that the annual revenue would increase in the SMEs selected for the program via the RCT method after two years since firms received the money, compared to non-beneficiaries SMEs from the comparison group?  \nRevenue is usually defined as the total amount of money received by the firm from its business activities during the course of a year. This includes income from sales of goods and services, rental income, interest, royalties, fees, commissions, and any other business income. It does not include sales tax collected directly from customers and remitted to tax authorities.  \n_Please allocate the probabilities in the cells corresponding to your beliefs._",
-      "column_1": "Percentage Points of Change in Annual Revenue",
+      "title_question": "Question 4 - Solar Energy Production",
+      "subtitle_question": "On average, how much do you think the grant would impact the kWh of renewable energy produced by solar/photovoltaic panels after two years for EEnergy Cash Winners, compared to EENergy Standard group? _Please allocate the probabilities in the cells corresponding to your beliefs, they should add to 100%._",
+      "column_1": "Percentage Points Change",
       "column_2": "Probabilities",
       "minor_value": "<-15.0",
       "min_value_graph": -15.0,
@@ -77,19 +70,17 @@
       "step_size_graph": 5.0,
       "major_value": ">15.0",
       "key": "data_editor4",
-      "title_x_axis": "Annual Revenue",
-      "title_y_axis": "Probabilities",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question4",
-      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up this program to more firms? Express your answer in percentage points, e.g. if you would want the annual revenue to increase by at least X%, you should give X as your answer."
+      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up EEnergy Efficiency Project to more firms? Express your answer in percentage points, e.g. if you would want the solar energy production to change by at least X% against the standard group, you should give X as your answer."
     },
     
       "question5": {
       "question_number": "Question 5",
       "key_form": "key_form5",
-      "title_question": "Question 5 - Annual Net Profit",
-      "subtitle_question": "On average, how much do you think that the annual net profit would increase in the SMEs selected for the program via the RCT method after two years since firms received the money, compared to non-beneficiaries SMEs from the comparison group?  \nNet profit is the amount of income that remains after all operating expenses, taxes, interest, and preferred stock dividends have been deducted from a company's total revenue.  \n _Please allocate the probabilities in the cells corresponding to your beliefs._ ",
-      "column_1": "Percentage Points Change in Annual Net Profit",
+      "title_question": "Question 5 - Business Process Innovation",
+      "subtitle_question": "On average, how much do you think the grant would impact the business process innovation after two years for EEnergy Cash Winners, compared to EENergy Standard group? _Please allocate the probabilities in the cells corresponding to your beliefs, they should add to 100%._",
+      "column_1": "Percentage Points Change",
       "column_2": "Probabilities",
       "minor_value": "<-15.0",
       "min_value_graph": -15,
@@ -97,19 +88,17 @@
       "step_size_graph": 5,
       "major_value": ">15.0",
       "key": "data_editor5",
-      "title_x_axis": "Annual Net Profit",
-      "title_y_axis": "Probabilities",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question5",
-      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up this program to more firms? Express your answer in percentage points, e.g. if you would want the annual net profit to increase by at least X%, you should give X as your answer."
+      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up the EEnergy Efficiency Project to more firms? Express your answer in percentage points, e.g. if you would want the business process innovation to change by at least X% against the standard group, you should give X as your answer."
     },
 
     "question6": {
       "question_number": "Question 6",
       "key_form": "key_form6",
-      "title_question": "Question 6 - Full-time Employees",
-      "subtitle_question": "On average, how much do you think that the total number of full-time employees would increase in the SMEs selected for the program via the RCT method after two years since firms received the money, compared to non-beneficiaries firms from the comparison group?\n_Please allocate the probabilities in the cells corresponding to your beliefs._ ",
-      "column_1": "% Change in Full-time Employees",
+      "title_question": "Question 6 - Digital Skills",
+      "subtitle_question": "On average, how much do you think the grant would impact the digital skills after two years for EEnergy Cash Winners, compared to EENergy Standard group? _Please allocate the probabilities in the cells corresponding to your beliefs, they should add to 100%._ ",
+      "column_1": "Percentage Points Change",
       "column_2": "Probabilities",
       "minor_value": "<-15.0",
       "min_value_graph": -15,
@@ -117,18 +106,16 @@
       "step_size_graph": 5,
       "major_value": ">15.0",
       "key": "data_editor6",
-      "title_x_axis": "Employment Level",
-      "title_y_axis": "Probabilities",
       "title_barchart": "Distribution of your Beliefs", 
       "num_input_question": "num_input_question6",
-      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up this program to more firms? Express your answer in percentage points, e.g. if you would want the number of employees to increase by at least X%, you should give X as your answer."
+      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up the EEnergy Efficiency Project to more firms? Express your answer in percentage points, e.g. if you would want the digital skills to change by at least X% against the standard group, you should give X as your answer."
     },
       "question7": {
       "question_number": "Question 7",
       "key_form": "key_form7",
-      "title_question": "Question 7 - Positive Impact on Employment in a Neighbouring Country",
-      "subtitle_question": "Suppose we found the impact on employment in neighboring countries was 10%, with a 95% confidence interval of [+5%., +15%]. That is, the program in this other country is estimated to have increased employment by 10% compared to a control group, and it is very likely the effect is between 5 and 15 percent. With this new information, please look again at the answers you gave in Question 6 about the impact of employment and if you want to update your estimate insert the new distribution of probabilities, otherwise insert again the same distribution as you did above. ",
-      "column_1": "% Change in Full-time Employees",
+      "title_question": "Question 7 - Sustainability of the Business Model",
+      "subtitle_question": "On average, how much do you think the grant would impact the business model's sustainability after two years for EEnergy Cash Winners, compared to EENergy Standard group? _Please allocate the probabilities in the cells corresponding to your beliefs, they should add to 100%._",
+      "column_1": "Percentage Points Change",
       "column_2": "Probabilities",
       "minor_value": "<-15.0",
       "min_value_graph": -15,
@@ -136,19 +123,17 @@
       "step_size_graph": 5,
       "major_value": ">15.0",
       "key": "data_editor7",
-      "title_x_axis": "",
-      "title_y_axis": "Probability",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question7",
-      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up this program to more firms? Express your answer in percentage points, e.g. if you would want the number of employees to increase by at least X%, you should give X as your answer."
+      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up the EEnergy Efficiency Project to more firms? Express your answer in percentage points, e.g. if you would want the business model's sustainability change by at least X% against the standard group, you should give X as your answer."
     },
 
       "question8": {
       "question_number": "Question 8",
       "key_form": "key_form8",
-      "title_question": "Question 8 - Negative Impact on Employment in a Neighbouring Country",
-      "subtitle_question": "What if, instead, we had found that employment actually fell 5 percent in this other neighbouring country relative to the control group, with a 95% confidence interval of [-10%., 0%]. That is, the program in this other country is estimated to have led slightly firms to shrink their labor force compared to a control group, and it is very likely the effect is between -10 and 0 percent. With this new information, please look again at the answers you gave in Question 6 about the impact of employment and f you want to update your estimate insert the new distribution of probabilities, otherwise insert again the same distribution as you did above. ",
-      "column_1": "% Change in Full-time Employees",
+      "title_question": "Question 8 - Annual Revenue",
+      "subtitle_question": "On average, how much do you think that the grant would impact the annual revenue after two years since firms received the money, compared to firms from the standard group?  \nRevenue is usually defined as the total amount of money received by the firm from its business activities during the year. This includes income from sales of goods and services, rental income, interest, royalties, fees, commissions, and any other business income. It does not include sales tax collected directly from customers and remitted to tax authorities. _Please allocate the probabilities in the cells corresponding to your beliefs, they should add to 100%._",
+      "column_1": "Percentage Points Change",
       "column_2": "Probabilities",
       "minor_value": "<-15.0",
       "min_value_graph": -15.0,
@@ -156,16 +141,32 @@
       "step_size_graph": 5.0,
       "major_value": ">15.0",
       "key": "data_editor8",
-      "title_x_axis": "Labor Productivity",
-      "title_y_axis": "Probabilities",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question8",
-      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up this program to more firms? Express your answer in percentage points, e.g. if you would want the number of employees to increase by at least X%, you should give X as your answer."
+      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up this program to more firms? Express your answer in percentage points, e.g. if you would want the annual revenue to change by at least X% against the standard group, you should give X as your answer."
     },
 
     "question9": {
       "question_number": "Question 9",
       "key_form": "key_form9",
+      "title_question": "Question 9 - Energy Cost-Revenue Ratio",
+      "subtitle_question": "Energy Cost-Revenue Ratio is a measure of how efficiently a company uses energy to generate revenue. It is calculated by dividing the total revenue by the total energy costs. A higher ratio indicates better energy efficiency, meaning the company generates more revenue per unit of energy cost. For instance, let us say we have two companies, A and B, each with the following figures for a given year:  \n\n- Company A:\n  - Revenue: 1,000,000\u20AC\n  - Energy Costs: 100,000\u20AC\n  - Energy-Revenue Cost Ratio: 1,000,000\u20AC / 100,000\u20AC = 10  \n\n- Company B:\n  - Revenue: 1,500,000\u20AC\n  - Energy Costs: 250,000\u20AC\n  - Energy-Revenue Cost Ratio: 1,500,000\u20AC / 250,000\u20AC = 6  \n\nIn this example, Company A has a higher Energy-Revenue cost ratio (10) compared to Company B (6), indicating that Company A is more efficient in generating revenue per unit of energy cost. On average, how much do you think the grant would impact the Energy-Revenue cost ratio after two years since firms received the money, compared to firms from the standard group? _Please allocate the probabilities in the cells corresponding to your beliefs, they should add up to 100%._",
+      "column_1": "Percentage Points Change",
+      "column_2": "Probabilities",
+      "minor_value": "<-15.0",
+      "min_value_graph": -15.0,
+      "max_value_graph": 15.0,
+      "step_size_graph": 5.0,
+      "major_value": ">15.0",
+      "key": "data_editor9",
+      "title_barchart": "Distribution of your Beliefs",
+      "num_input_question": "num_input_question9",
+      "effect_size": "- What would be the minimum effect size you would want to see to consider scaling up EEnergy Efficiency Project to more firms? Express your answer in percentage points, e.g. if you would want the Energy-Revenue cost ratio to change by at least X% against the standard group, you should give X as your answer. "
+    },
+
+    "question11": {
+      "question_number": "Question 9",
+      "key_form": "key_form11",
       "title_question": "Question 9 - Correlation Example",
       "subtitle_question": "In statistics, the correlation is a measure of how strongly two outcomes are linearly related. The correlation lies between -1 and 1. A correlation of -1 means that variables move perfectly in the opposite direction to one another, so that if one is high, the other is low. A 0 correlation means no relationship between them, while a correlation of +1 means the two move linearly together. A positive number between 0 and 1 means the two don't move perfectly together, but that you are somewhat more likely to see positive impacts in one variable when you see them somewhere else.\nTo make sure this is clear, let's first consider an example on the weather. What do you think is the correlation between the temperature on a Saturday and on a Sunday for all the weekends in a year?\n_Please allocate the probabilities in the cells corresponding to your beliefs._",
       "column_1": "Correlation",
@@ -175,11 +176,9 @@
       "max_value_graph": 1,
       "step_size_graph": 0.2,
       "major_value": "1.0",
-      "key": "data_editor9",
-      "title_x_axis": "Labor Productivity",
-      "title_y_axis": "Probabilities",
+      "key": "data_editor11",
       "title_barchart": "Distribution of your Beliefs",
-      "num_input_question": "num_input_question9",
+      "num_input_question": "num_input_question11",
       "effect_size": " "
     },
 
@@ -196,8 +195,6 @@
       "step_size_graph": 0.2,
       "major_value": "1.0",
       "key": "data_editor10",
-      "title_x_axis": "Correlation",
-      "title_y_axis": "Probabilities",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question10",
       "effect_size": "- What would be the minimum correlation you would want to see in order to consider scaling up this program to more firms? Express your answer with a value between -1 and 1."
