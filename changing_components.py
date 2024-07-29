@@ -237,7 +237,6 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     #column_names = sheet.append_row(column_names_list)
 
     sheet_row_update = sheet.append_rows(concatenated_df.values.tolist()) #.values.tolist())
-    st.write(st.secrets['folder_id'])
     
     #Navigate to the folder in Google Drive. Copy the Folder ID found in the URL. This is everything that comes after “folder/” in the URL.
     backup_sheet = client.create(f'Backup_{data[USER_FULL_NAME]}_{datetime.now()}', folder_id= secrets_to_json()['folder_id']).sheet1
