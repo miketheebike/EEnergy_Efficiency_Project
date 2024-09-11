@@ -163,3 +163,4 @@ secrets.toml
 
 keys copy.json
 .venv
+__pycache__
