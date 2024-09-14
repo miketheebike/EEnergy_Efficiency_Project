@@ -29,6 +29,7 @@ def initialize_session_state():
             'User Working Position': [],
             'User Professional Category': [],
             'User Years of Experience': [],
+            'Working Hours': [],
             'Minimum Effect Size Q1': [],
             'Minimum Effect Size Q2': [],    
             'Minimum Effect Size Q3': [],
@@ -178,6 +179,7 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     USER_PROF_CATEGORY = 'User Professional Category'
     USER_POSITION = 'User Working Position'
     YEARS_OF_EXPERIENCE = 'User Years of Experience'
+    WORKING_HOURS = 'Working Hours'
     MIN_EFF_SIZE_Q1 = 'Minimum Effect Size Q1'
     MIN_EFF_SIZE_Q2 = 'Minimum Effect Size Q2'
     MIN_EFF_SIZE_Q3 = 'Minimum Effect Size Q3'
@@ -195,6 +197,7 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     data[USER_POSITION].append(safe_var('user_position'))
     data[USER_PROF_CATEGORY].append(safe_var('professional_category'))
     data[YEARS_OF_EXPERIENCE].append(safe_var('years_of_experience'))
+    data[WORKING_HOURS].append(safe_var('working_hours'))
     data[MIN_EFF_SIZE_Q1].append(safe_var('num_input_question1'))
     data[MIN_EFF_SIZE_Q2].append(safe_var('num_input_question2'))
     data[MIN_EFF_SIZE_Q3].append(safe_var('num_input_question3'))
@@ -212,8 +215,8 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     
     session_state_df = pd.DataFrame(data)
     
-    personal_data_df = session_state_df.iloc[:, :4]
-    min_eff_df = session_state_df.iloc[:, 4:]
+    personal_data_df = session_state_df.iloc[:, :5]
+    min_eff_df = session_state_df.iloc[:, 5:]
 
     concatenated_df = pd.concat([personal_data_df, questions_df.set_index(personal_data_df.index), min_eff_df.set_index(personal_data_df.index)], axis=1)
       
