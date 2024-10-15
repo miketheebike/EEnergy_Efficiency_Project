@@ -35,21 +35,16 @@ def personal_information():
         st.selectbox('Please, specify your professional category:', ('Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor', 'Entrepreneur/Firm Representative'), key="professional_category")
         st.number_input('Please, insert the years of experience you have working on energy efficiency:', min_value= 0, max_value= 70, key = 'years_of_experience')
 
-def sustainability_advisors_question1():
+def sustainability_advisors_question():
         if st.session_state['professional_category'] == 'Sustainability Advisor':
-            st.write("")  # This will create a small space
+            st.write("") 
             st.write("")
-            st.write("On average, how many hours did you spend working for each client in total?")
+            st.write("Please answer the following if you are a sustainability advisor.")
             col1, _ = st.columns(2)
             with col1:
-                st.text_input("Please insert the average number of hours.", key = "working_hours")
+                st.text_input("On average, how many hours did you spend working for each client in total?", key = "working_hours")
+                st.text_input("How many firms they consult overall in a week (including firms outside of EEN)", key = "firms_consulted_pw")
 
-def sustainability_advisors_question2():
-        if st.session_state['professional_category'] == 'Sustainability Advisor':
-            st.write("On average, how many hours did you spend working for each client in total?")
-            col1, _ = st.columns(2)
-            with col1:
-                st.text_input("Please insert the average number of hours.", key = "working_hours")
 
 def secrets_to_json():
     return {
