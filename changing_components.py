@@ -88,7 +88,7 @@ def create_question(jsonfile_name):
 
             # Display the counter
             if percentage_difference > 0:
-                missing_prob = f'<b style="font-family:sans-serif; color:Green; font-size: 20px; ">You still have to allocate {percentage_difference}% probability.</b>'
+                missing_prob = f'<b style="font-family:sans-serif; color:Red; font-size: 20px; ">You still have to allocate {percentage_difference}% probability.</b>'
                 st.markdown(missing_prob, unsafe_allow_html=True)
                 
             elif percentage_difference == 0:
