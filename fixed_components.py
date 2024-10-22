@@ -47,59 +47,64 @@ def personal_information():
 
 def sustainability_advisors_question():
     if st.session_state['professional_category'] == 'Sustainability Advisor':
-        st.write("") 
+        st.write("")
         st.write("")
         st.write("Please answer the following if you are a sustainability advisor.")
         col1, _ = st.columns(2)
 
         with col1:
-            # Question about firms consulted (broader workload question near the top)
-            st.number_input("How many firms do you consult overall in a typical week (including firms outside of EEN)?", 
+            # Question 1: Firms consulted per week (broader workload question near the top)
+            st.number_input("How many firms do you work with in a typical week (including firms not part of EEN)?", 
                             min_value=0, step=1, key="firms_consulted_pw")
 
-            # Hours spent per client (specific to each engagement)
-            st.number_input("On average, how many hours do you spend working for each client per engagement?", 
+            # Question 2: Hours spent per client (specific to each engagement)
+            st.number_input("On average, how many hours do you spend working with each client on a project or service?", 
                             min_value=0.0, step=0.5, key="working_hours")
-            
-            # New questions
-            # Question about expected improvement in energy efficiency
-            st.text_input("Based on your experience with the EENergy call, for what percentage of firms do you expect a significant reduction in energy efficiency (e.g., 20%, 50%, etc.)?", key="expected_reduction")
-            
-            # Question about time spent per client
-            st.selectbox("Considering 10 clients you advise on energy efficiency topics, for how many do you spend the following amount of time on advice:",
+
+            # New Questions
+            # Expected improvement in energy efficiency
+            st.text_input("Based on your experience with the EENergy project, for how many firms do you expect a reduction in energy use? Please estimate the percentage (for example, 20%, 50%).", 
+                          key="expected_reduction")
+
+            # Time spent advising for 10 clients
+            st.selectbox("For 10 of your clients, how much time do you typically spend giving advice on energy efficiency?", 
                          options=["Less than 1 hour", "2-3 hours", "4-5 hours", "6+ hours"], key="time_spent_advising")
 
-            # Background on how they acquire clients
-            st.selectbox("How do you generally get to your clients or start engagements?",
+            # How do you acquire clients
+            st.selectbox("How do you usually find new clients or start working with them?", 
                          options=["Referrals", "Cold outreach", "Inbound inquiries", "Networking events", "Other"], key="client_acquisition")
 
             # Years working as an advisor
-            st.number_input("How many years have you been working as an advisor on energy efficiency topics?", min_value=0, max_value=50, key="years_as_advisor")
+            st.number_input("How many years have you been working as an advisor on energy efficiency topics?", 
+                            min_value=0, max_value=50, key="years_as_advisor")
 
             # Measures effectiveness
-            st.text_area("Which types of measures do you believe will be most and least effective in reducing energy consumption for a firm?", key="measures_effectiveness")
+            st.text_area("What actions or solutions do you think are most and least helpful for reducing a firm’s energy use?", 
+                         key="measures_effectiveness")
 
-            # Description of a good client engagement
-            st.text_area("How would you describe a successful engagement with a client?", key="good_engagement")
+            # Description of a successful client engagement
+            st.text_area("In your opinion, what makes working with a client successful?", 
+                         key="good_engagement")
 
             # Year joined EEN or more/less than 2 years
-            st.radio("When did you join EEN?",
+            st.radio("When did you join EEN?", 
                      options=["More than 2 years ago", "Less than 2 years ago", "I am not a member of EEN"], key="years_in_een")
 
             # Energy efficiency expert or generalist
-            st.radio("Do you describe yourself as an energy efficiency expert or a generalist?",
+            st.radio("Do you describe yourself as an energy efficiency expert or a generalist?", 
                      options=["Energy efficiency expert", "Generalist"], key="expert_or_generalist")
 
             # Basis of assessment (education or experience)
-            st.multiselect("What do you base your assessment on? (Select all that apply)",
+            st.multiselect("When evaluating energy efficiency, do you rely on education, experience, or both? (Select all that apply)", 
                            options=["Education", "Experience", "Both"], key="assessment_basis")
 
             # Work dedication to the topic
-            st.selectbox("What percentage of your work is dedicated to energy efficiency topics on average?",
+            st.selectbox("On average, what percentage of your work is related to energy efficiency topics?", 
                          options=["Less than 30%", "30-60%", "More than 60%"], key="work_dedication")
 
             # Workload question
-            st.text_area("Please describe your workload when working on energy efficiency topics.", key="workload_description")
+            st.text_area("Please describe your workload when working on energy efficiency topics.", 
+                         key="workload_description")
 
 
 
