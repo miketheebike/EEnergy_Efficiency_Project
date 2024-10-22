@@ -35,17 +35,67 @@ def personal_information():
         st.selectbox('Please, specify your professional category:', ('Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor', 'Entrepreneur/Firm Representative'), key="professional_category")
         st.number_input('Please, insert the years of experience you have working on energy efficiency:', min_value= 0, max_value= 70, key = 'years_of_experience')
 
+# def sustainability_advisors_question():
+#         if st.session_state['professional_category'] == 'Sustainability Advisor':
+#             st.write("") 
+#             st.write("")
+#             st.write("Please answer the following if you are a sustainability advisor.")
+#             col1, _ = st.columns(2)
+#             with col1:
+#                 st.text_input("On average, how many hours did you spend working for each client in total?", key = "working_hours")
+#                 st.text_input("How many firms they consult overall in a week (including firms outside of EEN)", key = "firms_consulted_pw")
+
 def sustainability_advisors_question():
-        if st.session_state['professional_category'] == 'Sustainability Advisor':
-            st.write("") 
-            st.write("")
-            st.write("Please answer the following if you are a sustainability advisor.")
-            col1, _ = st.columns(2)
-            with col1:
-                st.text_input("On average, how many hours did you spend working for each client in total?", key = "working_hours")
-                st.text_input("How many firms they consult overall in a week (including firms outside of EEN)", key = "firms_consulted_pw")
+    if st.session_state['professional_category'] == 'Sustainability Advisor':
+        st.write("") 
+        st.write("")
+        st.write("Please answer the following if you are a sustainability advisor.")
+        col1, _ = st.columns(2)
 
+        with col1:
+            # Existing questions
+            st.text_input("On average, how many hours did you spend working for each client in total?", key="working_hours")
+            st.text_input("How many firms do you consult overall in a week (including firms outside of EEN)?", key="firms_consulted_pw")
+            
+            # New questions
+            # Question about expected improvement in energy efficiency
+            st.text_input("Based on your experience with the EENergy call, for what percentage of firms do you expect a significant reduction in energy efficiency (e.g., 20%, 50%, etc.)?", key="expected_reduction")
+            
+            # Question about time spent per client
+            st.selectbox("Considering 10 clients you advise on energy efficiency topics, for how many do you spend the following amount of time on advice:",
+                         options=["Less than 1 hour", "2-3 hours", "4-5 hours", "6+ hours"], key="time_spent_advising")
 
+            # Background on how they acquire clients
+            st.selectbox("How do you generally get to your clients or start engagements?",
+                         options=["Referrals", "Cold outreach", "Inbound inquiries", "Networking events", "Other"], key="client_acquisition")
+
+            # Years working as an advisor
+            st.number_input("How many years have you been working as an advisor on energy efficiency topics?", min_value=0, max_value=50, key="years_as_advisor")
+
+            # Measures effectiveness
+            st.text_area("Which types of measures do you believe will be most and least effective in reducing energy consumption for a firm?", key="measures_effectiveness")
+
+            # Description of a good client engagement
+            st.text_area("How would you describe a successful engagement with a client?", key="good_engagement")
+
+            # Year joined EEN or more/less than 2 years
+            st.radio("When did you join EEN?",
+                     options=["More than 2 years ago", "Less than 2 years ago", "I am not a member of EEN"], key="years_in_een")
+
+            # Energy efficiency expert or generalist
+            st.radio("Do you describe yourself as an energy efficiency expert or a generalist?",
+                     options=["Energy efficiency expert", "Generalist"], key="expert_or_generalist")
+
+            # Basis of assessment (education or experience)
+            st.multiselect("What do you base your assessment on? (Select all that apply)",
+                           options=["Education", "Experience", "Both"], key="assessment_basis")
+
+            # Work dedication to the topic
+            st.selectbox("What percentage of your work is dedicated to energy efficiency topics on average?",
+                         options=["Less than 30%", "30-60%", "More than 60%"], key="work_dedication")
+
+            # Workload question
+            st.text_area("Please describe your workload when working on energy efficiency topics.", key="workload_description")
 def secrets_to_json():
     return {
         "folder_id": st.secrets["folder_id"],
