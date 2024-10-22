@@ -86,9 +86,8 @@ def sustainability_advisors_question():
             st.text_area("In your opinion, what makes working with a client successful?", 
                          key="good_engagement")
 
-            # Year joined EEN or more/less than 2 years
-            st.radio("When did you join EEN?", 
-                     options=["More than 2 years ago", "Less than 2 years ago", "I am not a member of EEN"], key="years_in_een")
+            # Year joined EEN with calendar widget
+            st.date_input("When did you join EEN?", key="join_date_een")
 
             # Energy efficiency expert or generalist
             st.radio("Do you describe yourself as an energy efficiency expert or a generalist?", 
