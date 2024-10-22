@@ -80,23 +80,50 @@ def create_question(jsonfile_name):
     st.write(jsonfile_name['subtitle_question'])
     
     data_container = st.container()
-    with data_container:
-        table, plot = st.columns([0.4, 0.6], gap="large")
-        with table:
-            bins_grid = st.data_editor(data, key= jsonfile_name['key'], hide_index=True, use_container_width=True, disabled=[jsonfile_name['column_1']])
-            percentage_difference = 100 - sum(bins_grid[jsonfile_name['column_2']])
+            with data_container:
+                # Define columns with adjusted layout proportions
+                table, plot = st.columns([0.4, 0.6], gap="large")
+            
+                with table:
+                    # Display data editor with specified options
+                    bins_grid = st.data_editor(data, 
+                                               key=jsonfile_name['key'], 
+                                               hide_index=True, 
+                                               use_container_width=True, 
+                                               disabled=[jsonfile_name['column_1']])
+            
+                    # Calculate the remaining percentage to be allocated
+                    percentage_difference = 100 - sum(bins_grid[jsonfile_name['column_2']])
+            
+                    # Helper function to display status message
+                    def display_message(message, color):
+                        styled_message = f'<b style="font-family:sans-serif; color:{color}; font-size: 20px; padding: 10px;">{message}</b>'
+                        st.markdown(styled_message, unsafe_allow_html=True)
+            
+                    # Display appropriate message based on the percentage difference
+                    if percentage_difference > 0:
+                        display_message(f'You still have to allocate {percentage_difference}% probability.', 'Red')
+                    elif percentage_difference == 0:
+                        display_message('You have allocated all probabilities!', 'Green')
+                    else:
+                        display_message(f'You have inserted {abs(percentage_difference)}% more, please review your percentage distribution.', 'Red')
+    # with data_container:
+    #     table, plot = st.columns([0.4, 0.6], gap="large")
+    #     with table:
+    #         bins_grid = st.data_editor(data, key= jsonfile_name['key'], hide_index=True, use_container_width=True, disabled=[jsonfile_name['column_1']])
+    #         percentage_difference = 100 - sum(bins_grid[jsonfile_name['column_2']])
 
-            # Display the counter
-            if percentage_difference > 0:
-                missing_prob = f'<b style="font-family:sans-serif; color:Red; font-size: 20px; ">You still have to allocate {percentage_difference}% probability.</b>'
-                st.markdown(missing_prob, unsafe_allow_html=True)
+    #         # Display the counter
+    #         if percentage_difference > 0:
+    #             missing_prob = f'<b style="font-family:sans-serif; color:Red; font-size: 20px; ">You still have to allocate {percentage_difference}% probability.</b>'
+    #             st.markdown(missing_prob, unsafe_allow_html=True)
                 
-            elif percentage_difference == 0:
-                total_prob = f'<b style="font-family:sans-serif; color:Green; font-size: 20px; ">You have allocated all probabilities!</b>'
-                st.markdown(total_prob, unsafe_allow_html=True)
-            else:
-                exceeding_prob = f'<b style="font-family:sans-serif; color:Red; font-size: 20px; ">You have inserted {abs(percentage_difference)}% more, please review your percentage distribution.</b>'
-                st.markdown(exceeding_prob, unsafe_allow_html=True)
+    #         elif percentage_difference == 0:
+    #             total_prob = f'<b style="font-family:sans-serif; color:Green; font-size: 20px; ">You have allocated all probabilities!</b>'
+    #             st.markdown(total_prob, unsafe_allow_html=True)
+    #         else:
+    #             exceeding_prob = f'<b style="font-family:sans-serif; color:Red; font-size: 20px; ">You have inserted {abs(percentage_difference)}% more, please review your percentage distribution.</b>'
+    #             st.markdown(exceeding_prob, unsafe_allow_html=True)
                       
         with plot:
             # Extract the updated values from the second column
