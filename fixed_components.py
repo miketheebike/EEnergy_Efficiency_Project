@@ -53,9 +53,13 @@ def sustainability_advisors_question():
         col1, _ = st.columns(2)
 
         with col1:
-            # Existing questions
-            st.text_input("On average, how many hours did you spend working for each client in total?", key="working_hours")
-            st.text_input("How many firms do you consult overall in a week (including firms outside of EEN)?", key="firms_consulted_pw")
+            # Question about firms consulted (broader workload question near the top)
+            st.number_input("How many firms do you consult overall in a typical week (including firms outside of EEN)?", 
+                            min_value=0, step=1, key="firms_consulted_pw")
+
+            # Hours spent per client (specific to each engagement)
+            st.number_input("On average, how many hours do you spend working for each client per engagement?", 
+                            min_value=0.0, step=0.5, key="working_hours")
             
             # New questions
             # Question about expected improvement in energy efficiency
@@ -96,6 +100,9 @@ def sustainability_advisors_question():
 
             # Workload question
             st.text_area("Please describe your workload when working on energy efficiency topics.", key="workload_description")
+
+
+
 def secrets_to_json():
     return {
         "folder_id": st.secrets["folder_id"],
