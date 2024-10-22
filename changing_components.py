@@ -98,7 +98,7 @@ def create_question(jsonfile_name):
                                        disabled=[jsonfile_name['column_1']])
 
             # Calculate the remaining percentage to be allocated
-            percentage_difference = 100 - sum(bins_grid[jsonfile_name['column_2']])
+            percentage_difference = round(100 - sum(bins_grid[jsonfile_name['column_2']]))
 
             # Helper function to display status message
             def display_message(message, color):
