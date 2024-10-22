@@ -61,7 +61,7 @@ def create_question(jsonfile_name):
     # Create a list of ranges based on the provided values
     x_axis = [minor_value] + [f"{round(i, 1)}% to {round((i + interval - 0.01), 2)}%" for i in np.arange(min_value, max_value, interval)] + [major_value]
 
-    # TODO find a way to remove it
+    # TODO: find a way to remove it
     if jsonfile_name['min_value_graph'] == -1:
         x_axis.insert(6, "0%")
         x_axis[1] = '-0.99% to -0.81%'
@@ -74,39 +74,44 @@ def create_question(jsonfile_name):
 
     y_axis = np.zeros(len(x_axis))
 
+    # Create dataframe for bins and their values
     data = pd.DataFrame(list(zip(x_axis, y_axis)), columns=[jsonfile_name['column_1'], jsonfile_name['column_2']])
 
+    # Display title and subtitle for the question
     st.subheader(jsonfile_name['title_question'])
     st.write(jsonfile_name['subtitle_question'])
-    
+
+    # Create a container for the data editor and other elements
     data_container = st.container()
-            with data_container:
-                # Define columns with adjusted layout proportions
-                table, plot = st.columns([0.4, 0.6], gap="large")
-            
-                with table:
-                    # Display data editor with specified options
-                    bins_grid = st.data_editor(data, 
-                                               key=jsonfile_name['key'], 
-                                               hide_index=True, 
-                                               use_container_width=True, 
-                                               disabled=[jsonfile_name['column_1']])
-            
-                    # Calculate the remaining percentage to be allocated
-                    percentage_difference = 100 - sum(bins_grid[jsonfile_name['column_2']])
-            
-                    # Helper function to display status message
-                    def display_message(message, color):
-                        styled_message = f'<b style="font-family:sans-serif; color:{color}; font-size: 20px; padding: 10px;">{message}</b>'
-                        st.markdown(styled_message, unsafe_allow_html=True)
-            
-                    # Display appropriate message based on the percentage difference
-                    if percentage_difference > 0:
-                        display_message(f'You still have to allocate {percentage_difference}% probability.', 'Red')
-                    elif percentage_difference == 0:
-                        display_message('You have allocated all probabilities!', 'Green')
-                    else:
-                        display_message(f'You have inserted {abs(percentage_difference)}% more, please review your percentage distribution.', 'Red')
+
+    # Integrate the updated logic for displaying data editor and handling percentages
+    with data_container:
+        # Create table and plot layout
+        table, plot = st.columns([0.4, 0.6], gap="large")
+
+        with table:
+            # Display the data editor
+            bins_grid = st.data_editor(data, 
+                                       key=jsonfile_name['key'], 
+                                       hide_index=True, 
+                                       use_container_width=True, 
+                                       disabled=[jsonfile_name['column_1']])
+
+            # Calculate the remaining percentage to be allocated
+            percentage_difference = 100 - sum(bins_grid[jsonfile_name['column_2']])
+
+            # Helper function to display status message
+            def display_message(message, color):
+                styled_message = f'<b style="font-family:sans-serif; color:{color}; font-size: 20px; padding: 10px;">{message}</b>'
+                st.markdown(styled_message, unsafe_allow_html=True)
+
+            # Display appropriate message based on the percentage difference
+            if percentage_difference > 0:
+                display_message(f'You still have to allocate {percentage_difference}% probability.', 'Red')
+            elif percentage_difference == 0:
+                display_message('You have allocated all probabilities!', 'Green')
+            else:
+                display_message(f'You have inserted {abs(percentage_difference)}% more, please review your percentage distribution.', 'Red')
     # with data_container:
     #     table, plot = st.columns([0.4, 0.6], gap="large")
     #     with table:
