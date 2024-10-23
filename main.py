@@ -18,7 +18,9 @@ consent_form()
 if st.session_state['consent']:
 
     personal_information()
-
+    
+    entrepreneur_firm_representative_question()
+    
     sustainability_advisors_question()
 
     instructions()
