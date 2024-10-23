@@ -143,36 +143,37 @@ def sustainability_advisors_question():
             # Workload question
             st.text_area("Please describe your workload when working on energy efficiency topics.", 
                          key="workload_description")
-                
-             # Question 1: Number of firms advised on sustainability practices
+
+            # Additional questions adapted for advisors from entrepreneur survey:
+            # Number of firms advised on sustainability practices
             st.number_input("How many firms do you advise on sustainable development practices?", 
                             min_value=0, step=1, key="num_firms_advised")
 
-            # Question 2: Frequency of meetings with firms
+            # Frequency of meetings with firms
             st.selectbox("How often do you meet with the firms you advise?", 
                          options=["Daily", "Weekly", "Monthly", "Quarterly", "Annually", "As needed"], key="meeting_frequency_advisors")
 
-            # Question 3: Duration of meetings
+            # Duration of meetings
             st.selectbox("How long are your typical meetings with the firms you advise?", 
                          options=["Less than 30 minutes", "30-60 minutes", "1-2 hours", "More than 2 hours"], key="meeting_duration_advisors")
 
-            # Question 4: Topics discussed in meetings
+            # Topics discussed in meetings
             st.text_area("What topics do you usually discuss during your meetings with firms?", key="meeting_topics_advisors")
 
-            # Question 5: Usefulness of meetings for firms
+            # Usefulness of meetings for firms
             st.radio("How would you rate the usefulness of your meetings for helping firms improve their sustainability practices?", 
                      options=["Very useful", "Somewhat useful", "Neutral", "Not very useful", "Not useful at all"], key="meeting_usefulness_advisors")
 
-            # Question 6: Advice followed by firms
+            # Advice followed by firms
             st.text_area("What advice have you given to firms that they have chosen to follow?", key="advice_followed_by_firms")
 
-            # Question 7: Reasons for following advice
+            # Reasons for following advice
             st.text_area("Why do you think firms chose to follow your advice?", key="reasons_for_firms_following")
 
-            # Question 8: Advice not followed by firms
+            # Advice not followed by firms
             st.text_area("What advice have you given to firms that they decided not to follow?", key="advice_not_followed_by_firms")
 
-            # Question 9: Reasons for not following advice
+            # Reasons for not following advice
             st.text_area("Why do you think firms chose not to follow your advice? (For example: financial costs, labor costs, or other reasons)", key="reasons_firms_not_following")
 
 
