@@ -53,8 +53,8 @@ def survey_title_subtitle(header_config):
             
 def reset_prob_dist():
     st.session_state.prob_dist = [0.0] * len(options)
-
 def create_question(jsonfile_name):
+    # Initializing variables
     minor_value = str(jsonfile_name['minor_value'])
     min_value = jsonfile_name['min_value_graph']
     max_value = jsonfile_name['max_value_graph']
@@ -64,7 +64,7 @@ def create_question(jsonfile_name):
     # Create a list of ranges based on the provided values
     x_axis = [minor_value] + [f"{round(i, 1)}% to {round((i + interval - 0.01), 2)}%" for i in np.arange(min_value, max_value, interval)] + [major_value]
 
-    # TODO: find a way to remove it
+    # Custom adjustments to x_axis
     if jsonfile_name['min_value_graph'] == -1:
         x_axis.insert(6, "0%")
         x_axis[1] = '-0.99% to -0.81%'
@@ -72,14 +72,22 @@ def create_question(jsonfile_name):
     elif jsonfile_name['min_value_graph'] == -15:
         x_axis.insert(4, "0%")
         x_axis[5] = '0.01% to 4.99%'
-    elif jsonfile_name['min_value_graph'] == 0:    
+    elif jsonfile_name['min_value_graph'] == 0:
         x_axis[1] = '0.01% to 4.99%'
 
+    # Initialize y_axis values to zero
     y_axis = np.zeros(len(x_axis))
 
     # Create dataframe for bins and their values
     data = pd.DataFrame(list(zip(x_axis, y_axis)), columns=[jsonfile_name['column_1'], jsonfile_name['column_2']])
-            
+
+    # Adding Reset button
+    reset_button = st.button("Reset Table to 0", key=f"reset_{jsonfile_name['key']}")
+    
+    # Handle Reset button click by setting y_axis values to 0
+    if reset_button:
+        data[jsonfile_name['column_2']] = 0  # Reset the probability column values to zero
+        st.session_state[jsonfile_name['key']] = data  # Save the reset data in session state to persist
 
     # Display title and subtitle for the question
     st.subheader(jsonfile_name['title_question'])
@@ -116,28 +124,7 @@ def create_question(jsonfile_name):
                 display_message('You have allocated all probabilities!', 'Green')
             else:
                 display_message(f'You have inserted {abs(percentage_difference)}% more, please review your percentage distribution.', 'Red')
-            # Place the reset button below the slider
-            if st.button("Reset All Probabilities"):
-                reset_prob_dist()
-                        
-    # with data_container:
-    #     table, plot = st.columns([0.4, 0.6], gap="large")
-    #     with table:
-    #         bins_grid = st.data_editor(data, key= jsonfile_name['key'], hide_index=True, use_container_width=True, disabled=[jsonfile_name['column_1']])
-    #         percentage_difference = 100 - sum(bins_grid[jsonfile_name['column_2']])
 
-    #         # Display the counter
-    #         if percentage_difference > 0:
-    #             missing_prob = f'<b style="font-family:sans-serif; color:Red; font-size: 20px; ">You still have to allocate {percentage_difference}% probability.</b>'
-    #             st.markdown(missing_prob, unsafe_allow_html=True)
-                
-    #         elif percentage_difference == 0:
-    #             total_prob = f'<b style="font-family:sans-serif; color:Green; font-size: 20px; ">You have allocated all probabilities!</b>'
-    #             st.markdown(total_prob, unsafe_allow_html=True)
-    #         else:
-    #             exceeding_prob = f'<b style="font-family:sans-serif; color:Red; font-size: 20px; ">You have inserted {abs(percentage_difference)}% more, please review your percentage distribution.</b>'
-    #             st.markdown(exceeding_prob, unsafe_allow_html=True)
-                      
         with plot:
             # Extract the updated values from the second column
             updated_values = bins_grid[jsonfile_name['column_2']]
@@ -185,6 +172,137 @@ def create_question(jsonfile_name):
             st.plotly_chart(fig)
 
     return pd.DataFrame(bins_grid), percentage_difference, len(bins_grid)
+# def create_question(jsonfile_name):
+#     minor_value = str(jsonfile_name['minor_value'])
+#     min_value = jsonfile_name['min_value_graph']
+#     max_value = jsonfile_name['max_value_graph']
+#     interval = jsonfile_name['step_size_graph']
+#     major_value = str(jsonfile_name['major_value'])
+
+#     # Create a list of ranges based on the provided values
+#     x_axis = [minor_value] + [f"{round(i, 1)}% to {round((i + interval - 0.01), 2)}%" for i in np.arange(min_value, max_value, interval)] + [major_value]
+
+#     # TODO: find a way to remove it
+#     if jsonfile_name['min_value_graph'] == -1:
+#         x_axis.insert(6, "0%")
+#         x_axis[1] = '-0.99% to -0.81%'
+#         x_axis[7] = '0.01% to 0.19%'
+#     elif jsonfile_name['min_value_graph'] == -15:
+#         x_axis.insert(4, "0%")
+#         x_axis[5] = '0.01% to 4.99%'
+#     elif jsonfile_name['min_value_graph'] == 0:    
+#         x_axis[1] = '0.01% to 4.99%'
+
+#     y_axis = np.zeros(len(x_axis))
+
+#     # Create dataframe for bins and their values
+#     data = pd.DataFrame(list(zip(x_axis, y_axis)), columns=[jsonfile_name['column_1'], jsonfile_name['column_2']])
+            
+
+#     # Display title and subtitle for the question
+#     st.subheader(jsonfile_name['title_question'])
+#     st.write(jsonfile_name['subtitle_question'])
+
+#     # Create a container for the data editor and other elements
+#     data_container = st.container()
+
+#     # Integrate the updated logic for displaying data editor and handling percentages
+#     with data_container:
+#         # Create table and plot layout
+#         table, plot = st.columns([0.4, 0.6], gap="large")
+
+#         with table:
+#             # Display the data editor
+#             bins_grid = st.data_editor(data, 
+#                                        key=jsonfile_name['key'], 
+#                                        hide_index=True, 
+#                                        use_container_width=True, 
+#                                        disabled=[jsonfile_name['column_1']])
+
+#             # Calculate the remaining percentage to be allocated
+#             percentage_difference = round(100 - sum(bins_grid[jsonfile_name['column_2']]))
+
+#             # Helper function to display status message
+#             def display_message(message, color):
+#                 styled_message = f'<b style="font-family:sans-serif; color:{color}; font-size: 20px; padding: 10px;">{message}</b>'
+#                 st.markdown(styled_message, unsafe_allow_html=True)
+
+#             # Display appropriate message based on the percentage difference
+#             if percentage_difference > 0:
+#                 display_message(f'You still have to allocate {percentage_difference}% probability.', 'Red')
+#             elif percentage_difference == 0:
+#                 display_message('You have allocated all probabilities!', 'Green')
+#             else:
+#                 display_message(f'You have inserted {abs(percentage_difference)}% more, please review your percentage distribution.', 'Red')
+#             # Place the reset button below the slider
+#             if st.button("Reset All Probabilities"):
+#                 reset_prob_dist()
+                        
+#     # with data_container:
+#     #     table, plot = st.columns([0.4, 0.6], gap="large")
+#     #     with table:
+#     #         bins_grid = st.data_editor(data, key= jsonfile_name['key'], hide_index=True, use_container_width=True, disabled=[jsonfile_name['column_1']])
+#     #         percentage_difference = 100 - sum(bins_grid[jsonfile_name['column_2']])
+
+#     #         # Display the counter
+#     #         if percentage_difference > 0:
+#     #             missing_prob = f'<b style="font-family:sans-serif; color:Red; font-size: 20px; ">You still have to allocate {percentage_difference}% probability.</b>'
+#     #             st.markdown(missing_prob, unsafe_allow_html=True)
+                
+#     #         elif percentage_difference == 0:
+#     #             total_prob = f'<b style="font-family:sans-serif; color:Green; font-size: 20px; ">You have allocated all probabilities!</b>'
+#     #             st.markdown(total_prob, unsafe_allow_html=True)
+#     #         else:
+#     #             exceeding_prob = f'<b style="font-family:sans-serif; color:Red; font-size: 20px; ">You have inserted {abs(percentage_difference)}% more, please review your percentage distribution.</b>'
+#     #             st.markdown(exceeding_prob, unsafe_allow_html=True)
+                      
+#         with plot:
+#             # Extract the updated values from the second column
+#             updated_values = bins_grid[jsonfile_name['column_2']]
+
+#             # Plot the updated values as a bar plot
+#             fig = go.Figure()
+#             fig.add_trace(go.Bar(
+#                 x=bins_grid[jsonfile_name['column_1']], 
+#                 y=updated_values, 
+#                 marker_color='rgba(50, 205, 50, 0.9)',  # A nice bright green
+#                 marker_line_color='rgba(0, 128, 0, 1.0)',  # Dark green outline for contrast
+#                 marker_line_width=2,  # Width of the bar outline
+#                 text=[f"{p}" for p in bins_grid[jsonfile_name['column_2']]],  # Adding percentage labels to bars
+#                 textposition='auto',
+#                 name='Probability'
+#             ))
+
+#             fig.update_layout(
+#                 title={
+#                     'text': "Probability distribution",
+#                     'y':0.9,
+#                     'x':0.5,
+#                     'xanchor': 'center',
+#                     'yanchor': 'top'
+#                 },
+#                 xaxis_title="Expectation Range",
+#                 yaxis_title="Probability (%)",
+#                 yaxis=dict(
+#                     range=[0, 100], 
+#                     gridcolor='rgba(255, 255, 255, 0.2)',  # Light grid on dark background
+#                     showline=True,
+#                     linewidth=2,
+#                     linecolor='white',
+#                     mirror=True
+#                 ),
+#                 xaxis=dict(
+#                     tickangle=-45,
+#                     showline=True,
+#                     linewidth=2,
+#                     linecolor='white',
+#                     mirror=True
+#                 ),
+#                 font=dict(color='white'),  # White font color for readability
+#             )
+#             st.plotly_chart(fig)
+
+#     return pd.DataFrame(bins_grid), percentage_difference, len(bins_grid)
 
 def effect_size_question(jsonfile_name):
     col1, _ = st.columns(2)
