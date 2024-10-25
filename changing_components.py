@@ -76,7 +76,13 @@ def create_question(jsonfile_name):
 
     # Create dataframe for bins and their values
     data = pd.DataFrame(list(zip(x_axis, y_axis)), columns=[jsonfile_name['column_1'], jsonfile_name['column_2']])
-
+            
+    # Adding Reset button
+    reset_button = st.button("Reset Table to 0", key=f"reset_{jsonfile_name['key']}")
+            
+    if reset_button:
+        data[jsonfile_name['column_2']] = 0  # Reset the probability column values to zero
+        st.session_state[jsonfile_name['key']] = data  # Save the reset data in session state to persist
     # Display title and subtitle for the question
     st.subheader(jsonfile_name['title_question'])
     st.write(jsonfile_name['subtitle_question'])
