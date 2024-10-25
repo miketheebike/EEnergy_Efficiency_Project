@@ -50,6 +50,9 @@ def safe_var(key):
 def survey_title_subtitle(header_config):
     st.title(header_config['survey_title'])
     st.write(header_config['survey_description'])
+            
+def reset_prob_dist():
+    st.session_state.prob_dist = [0.0] * len(options)
 
 def create_question(jsonfile_name):
     minor_value = str(jsonfile_name['minor_value'])
@@ -77,12 +80,7 @@ def create_question(jsonfile_name):
     # Create dataframe for bins and their values
     data = pd.DataFrame(list(zip(x_axis, y_axis)), columns=[jsonfile_name['column_1'], jsonfile_name['column_2']])
             
-    # Adding Reset button
-    reset_button = st.button("Reset Table to 0", key=f"reset_{jsonfile_name['key']}")
-            
-    if reset_button:
-        data[jsonfile_name['column_2']] = 0  # Reset the probability column values to zero
-        st.session_state[jsonfile_name['key']] = data  # Save the reset data in session state to persist
+
     # Display title and subtitle for the question
     st.subheader(jsonfile_name['title_question'])
     st.write(jsonfile_name['subtitle_question'])
@@ -118,6 +116,10 @@ def create_question(jsonfile_name):
                 display_message('You have allocated all probabilities!', 'Green')
             else:
                 display_message(f'You have inserted {abs(percentage_difference)}% more, please review your percentage distribution.', 'Red')
+            # Place the reset button below the slider
+            if st.button("Reset All Probabilities"):
+                reset_prob_dist()
+                        
     # with data_container:
     #     table, plot = st.columns([0.4, 0.6], gap="large")
     #     with table:
