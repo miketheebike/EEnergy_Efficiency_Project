@@ -116,9 +116,7 @@ def create_question(jsonfile_name):
                 display_message('You have allocated all probabilities!', 'Green')
             else:
                 display_message(f'You have inserted {abs(percentage_difference)}% more, please review your percentage distribution.', 'Red')
-            # Place the reset button below the slider
-            if st.button("Reset All Probabilities"):
-                reset_prob_dist()
+
                         
     # with data_container:
     #     table, plot = st.columns([0.4, 0.6], gap="large")
