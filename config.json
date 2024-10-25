@@ -36,7 +36,7 @@
       "key": "data_editor2",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question2",
-      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up the EEnergy Efficiency Project to more firms? Express your answer in percentage points, e.g. if you would want the annual consumption of renewable energy to change by at least X%, you should give X as your answer."
+      "effect_size": "*Based on your previous answers, we would like to understand the minimum impact you would require to consider scaling up the EEnergy Efficiency Project to more firms.*\n\n- What is the smallest percentage increase in renewable energy consumption that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."
     },
 
     "question3": {
