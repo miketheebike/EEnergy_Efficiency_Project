@@ -51,8 +51,7 @@ def survey_title_subtitle(header_config):
     st.title(header_config['survey_title'])
     st.write(header_config['survey_description'])
             
-def reset_prob_dist():
-    st.session_state.prob_dist = [0.0] * len(options)
+
 
 def create_question(jsonfile_name):
     minor_value = str(jsonfile_name['minor_value'])
