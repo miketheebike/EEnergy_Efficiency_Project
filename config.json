@@ -54,7 +54,7 @@
       "key": "data_editor3",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question3",
-      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up the EEnergy Efficiency Project to more firms? Express your answer in percentage points, e.g. if you would want the likelihood of installing solar/photovoltaic panels to change by at least X% against the standard group, you should give X as your answer."
+      "effect_size": "*Based on your previous answers, we would like to understand the minimum impact you would need to see in order to consider scaling up the EEnergy Efficiency Project to more firms.*\n\n- What is the smallest percentage increase in the likelihood of installing solar/photovoltaic panels that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."
     },
 
     
@@ -73,7 +73,7 @@
       "key": "data_editor4",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question4",
-      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up the EEnergy Efficiency Project to more firms? Express your answer in percentage points, e.g. if you would want the business process innovation to change by at least X% against the standard group, you should give X as your answer."
+      "effect_size": "*Based on your previous answers, we would like to understand the minimum impact you would need to see in order to consider scaling up the EEnergy Efficiency Project to more firms.*\n\n- What is the smallest percentage increase in business process innovation that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."
     },
 
     "question5": {
@@ -91,7 +91,7 @@
       "key": "data_editor5",
       "title_barchart": "Distribution of your Beliefs", 
       "num_input_question": "5",
-      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up the EEnergy Efficiency Project to more firms? Express your answer in percentage points, e.g. if you would want the digital skills to change by at least X% against the standard group, you should give X as your answer."
+      "effect_size": "*Based on your previous answers, we would like to understand the minimum impact you would need to see in order to consider scaling up the EEnergy Efficiency Project to more firms.*\n\n- What is the smallest percentage increase in digital skills that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."
     },
       "question6": {
       "question_number": "Question 6",
@@ -108,7 +108,7 @@
       "key": "data_editor6",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question6",
-      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up the EEnergy Efficiency Project to more firms? Express your answer in percentage points, e.g. if you would want the business model's sustainability change by at least X% against the standard group, you should give X as your answer."
+      "effect_size": "*Based on your previous answers, we would like to understand the minimum impact you would need to see in order to consider scaling up the EEnergy Efficiency Project to more firms.*\n\n- What is the smallest percentage improvement in the sustainability of the business model that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."
     },
 
       "question7": {
@@ -126,7 +126,7 @@
       "key": "data_editor7",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question7",
-      "effect_size": "- What would be the minimum impact you would want to see in order to consider scaling up this program to more firms? Express your answer in percentage points, e.g. if you would want the annual revenue to change by at least X% against the standard group, you should give X as your answer."
+      "effect_size": "*Based on your previous answers, we would like to understand the minimum impact you would need to see in order to consider scaling up this program to more firms.*\n\n- What is the smallest percentage increase in annual revenue that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."
     },
 
     "question8": {
@@ -144,7 +144,7 @@
       "key": "data_editor8",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question8",
-      "effect_size": "- What would be the minimum effect size you would want to see to consider scaling up EEnergy Efficiency Project to more firms? Express your answer in percentage points, e.g. if you would want the Energy-Revenue cost ratio to change by at least X% against the standard group, you should give X as your answer. "
+      "effect_size": "*Based on your previous answers, we would like to understand the minimum effect size you would need to see in order to consider scaling up the EEnergy Efficiency Project to more firms.*\n\n- What is the smallest percentage change in the Energy-Revenue cost ratio that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."
     },
 
     "question9": {
@@ -180,7 +180,7 @@
       "key": "data_editor10",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question10",
-      "effect_size": "- What would be the minimum correlation you would want to see in order to consider scaling up this program to more firms? Express your answer with a value between -1 and 1."
+      "effect_size": "*Based on your previous answers, we would like to understand the minimum correlation you would need to see in order to consider scaling up this program to more firms.*\n\n- What is the smallest correlation value (between -1 and 1) that would convince you to expand this program? Please provide a value, or simply skip this question if you do not want to answer."
     }
 
 }
