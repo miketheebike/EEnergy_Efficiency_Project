@@ -19,7 +19,7 @@
       "key": "data_editor1",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question1",
-      "effect_size": "- What is the smallest percentage reduction in energy consumption that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."},
+      "effect_size": "*Based on your previous answers, we would like to understand the minimum change in energy consumption you would require to consider the program successful.*\n\n- What is the smallest percentage reduction in energy consumption that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."},
 
     "question2": {
       "question_number": "Question 2",
