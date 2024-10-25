@@ -182,7 +182,7 @@ def effect_size_question(jsonfile_name):
     col1, _ = st.columns(2)
     with col1:
         st.markdown(jsonfile_name['effect_size'])
-        st.text_input("Please insert a number or write 'I don't know'.", key = jsonfile_name['num_input_question'])
+        st.text_input("Please insert a number, or skip if you are not sure.", key = jsonfile_name['num_input_question'])
 
 def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updated_bins_question_3_df, updated_bins_question_4_df, updated_bins_question_5_df, updated_bins_question_6_df, updated_bins_question_7_df, updated_bins_question_8_df, updated_bins_question_9_df):
 
