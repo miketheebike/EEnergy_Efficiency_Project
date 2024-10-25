@@ -36,7 +36,7 @@ def personal_information():
         st.number_input(
     'Please, insert the years of experience you have working on energy efficiency:', 
     min_value=0.0, 
-    step=0.1, 
+    step=0.5, 
     format="%.1f", 
     key='years_of_experience'
 )
