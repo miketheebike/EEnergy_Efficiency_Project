@@ -19,7 +19,7 @@
       "key": "data_editor1",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question1",
-      "effect_size": "- What would be the minimum effect size you would want to see to consider scaling up the EEnergy Efficiency Project to more firms? Express your answer in percentage points, e.g. if you would want the annual consumption of energy to change by at least X% against the standard group, you should give X as your answer."},
+      "effect_size": "- What is the smallest percentage reduction in energy consumption that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."},
 
     "question2": {
       "question_number": "Question 2",
