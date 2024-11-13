@@ -56,13 +56,12 @@
       "num_input_question": "num_input_question3",
       "effect_size": "*Based on your previous answers, we would like to understand the minimum impact you would need to see in order to consider scaling up the EEnergy Efficiency Project to more firms.*\n\n- What is the smallest percentage increase in the likelihood of installing solar/photovoltaic panels that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."
     },
-
     
       "question4": {
       "question_number": "Question 4",
       "key_form": "key_form4",
-      "title_question": "Question 4 - Business Process Innovation",
-      "subtitle_question": "On average, how much do you think the grant would impact the business process innovation after two years? _Please allocate the probabilities in the cells corresponding to your beliefs, they should add to 100%._",
+      "title_question": "Question 4 - Sustainability of the Business Model",
+      "subtitle_question": "On average, how much do you think the grant would impact the business model's sustainability after two years? _Please allocate the probabilities in the cells corresponding to your beliefs, they should add to 100%._",
       "column_1": "Percentage Points Change",
       "column_2": "Probabilities",
       "minor_value": "Less than -15%",
@@ -72,49 +71,14 @@
       "major_value": "More than 15%",
       "key": "data_editor4",
       "title_barchart": "Distribution of your Beliefs",
-      "num_input_question": "num_input_question4",
-      "effect_size": "*Based on your previous answers, we would like to understand the minimum impact you would need to see in order to consider scaling up the EEnergy Efficiency Project to more firms.*\n\n- What is the smallest percentage increase in business process innovation that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."
-    },
-
-    "question5": {
-      "question_number": "Question 5",
-      "key_form": "key_form5",
-      "title_question": "Question 5 - Digital Skills",
-      "subtitle_question": "On average, how much do you think the grant would impact the digital skills after two years? _Please allocate the probabilities in the cells corresponding to your beliefs, they should add to 100%._ ",
-      "column_1": "Percentage Points Change",
-      "column_2": "Probabilities",
-      "minor_value": "Less than -15%",
-      "min_value_graph": -15,
-      "max_value_graph": 15,
-      "step_size_graph": 5,
-      "major_value": "More than 15%",
-      "key": "data_editor5",
-      "title_barchart": "Distribution of your Beliefs", 
-      "num_input_question": "5",
-      "effect_size": "*Based on your previous answers, we would like to understand the minimum impact you would need to see in order to consider scaling up the EEnergy Efficiency Project to more firms.*\n\n- What is the smallest percentage increase in digital skills that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."
-    },
-      "question6": {
-      "question_number": "Question 6",
-      "key_form": "key_form6",
-      "title_question": "Question 6 - Sustainability of the Business Model",
-      "subtitle_question": "On average, how much do you think the grant would impact the business model's sustainability after two years? _Please allocate the probabilities in the cells corresponding to your beliefs, they should add to 100%._",
-      "column_1": "Percentage Points Change",
-      "column_2": "Probabilities",
-      "minor_value": "Less than -15%",
-      "min_value_graph": -15,
-      "max_value_graph": 15,
-      "step_size_graph": 5,
-      "major_value": "More than 15%",
-      "key": "data_editor6",
-      "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question6",
       "effect_size": "*Based on your previous answers, we would like to understand the minimum impact you would need to see in order to consider scaling up the EEnergy Efficiency Project to more firms.*\n\n- What is the smallest percentage improvement in the sustainability of the business model that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."
     },
 
-      "question7": {
-      "question_number": "Question 7",
-      "key_form": "key_form7",
-      "title_question": "Question 7 - Annual Revenue",
+      "question5": {
+      "question_number": "Question 5",
+      "key_form": "key_form5",
+      "title_question": "Question 5 - Annual Revenue",
       "subtitle_question": "On average, how much do you think that the grant would impact the annual revenue after two years since firms received the money, compared to firms from the standard group?  \nRevenue is usually defined as the total amount of money received by the firm from its business activities during the year. This includes income from sales of goods and services, rental income, interest, royalties, fees, commissions, and any other business income. It does not include sales tax collected directly from customers and remitted to tax authorities. _Please allocate the probabilities in the cells corresponding to your beliefs, they should add to 100%._",
       "column_1": "Percentage Points Change",
       "column_2": "Probabilities",
@@ -123,16 +87,16 @@
       "max_value_graph": 15.0,
       "step_size_graph": 5.0,
       "major_value": "More than 15%",
-      "key": "data_editor7",
+      "key": "data_editor5",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question7",
       "effect_size": "*Based on your previous answers, we would like to understand the minimum impact you would need to see in order to consider scaling up this program to more firms.*\n\n- What is the smallest percentage increase in annual revenue that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."
     },
 
-    "question8": {
-      "question_number": "Question 8",
-      "key_form": "key_form8",
-      "title_question": "Question 8 - Energy Cost-Revenue Ratio",
+    "question6": {
+      "question_number": "Question 6",
+      "key_form": "key_form6",
+      "title_question": "Question 6 - Energy Cost-Revenue Ratio",
       "subtitle_question": "Energy Cost-Revenue Ratio is a measure of how efficiently a company uses energy to generate revenue. It is calculated by dividing the total revenue by the total energy costs. A higher ratio indicates better energy efficiency, meaning the company generates more revenue per unit of energy cost. For instance, let us say we have two companies, A and B, each with the following figures for a given year:  \n\n- Company A:\n  - Revenue: 1,000,000\u20AC\n  - Energy Costs: 100,000\u20AC\n  - Energy-Revenue Cost Ratio: 1,000,000\u20AC / 100,000\u20AC = 10  \n\n- Company B:\n  - Revenue: 1,500,000\u20AC\n  - Energy Costs: 250,000\u20AC\n  - Energy-Revenue Cost Ratio: 1,500,000\u20AC / 250,000\u20AC = 6  \n\nIn this example, Company A has a higher Energy-Revenue cost ratio (10) compared to Company B (6), indicating that Company A is more efficient in generating revenue per unit of energy cost. On average, how much do you think the grant would impact the Energy-Revenue cost ratio of beneficiary firms after two years since firms received the money, compared to firms from the standard group? _Please allocate the probabilities in the cells corresponding to your beliefs, they should add up to 100%._",
       "column_1": "Percentage Points Change",
       "column_2": "Probabilities",
@@ -141,16 +105,16 @@
       "max_value_graph": 15.0,
       "step_size_graph": 5.0,
       "major_value": "More than 15%",
-      "key": "data_editor8",
+      "key": "data_editor6",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question8",
       "effect_size": "*Based on your previous answers, we would like to understand the minimum effect size you would need to see in order to consider scaling up the EEnergy Efficiency Project to more firms.*\n\n- What is the smallest percentage change in the Energy-Revenue cost ratio that would convince you to expand this program? Please provide a percentage, or simply skip this question if you do not want to answer."
     },
 
-    "question9": {
-      "question_number": "Question 9",
-      "key_form": "key_form11",
-      "title_question": "Question 9 - Correlation Example",
+    "question7": {
+      "question_number": "Question 7",
+      "key_form": "key_form7",
+      "title_question": "Question 7 - Correlation Example",
       "subtitle_question": "In statistics, the correlation is a measure of how strongly two outcomes are linearly related. The correlation lies between -1 and 1.  \nA correlation of -1 means that variables move perfectly in the opposite direction to one another, so that if one is high, the other is low.  \nA 0 correlation means no relationship between them, while a correlation of +1 means the two move linearly together.  \nA positive number between 0 and 1 means the two don't move perfectly together, but that you are somewhat more likely to see positive impacts in one variable when you see them somewhere else. \nTo make sure this is clear, let's first consider an example on the weather.  \nWhat do you think is the correlation between the temperature on a Saturday and on a Sunday for all the weekends in a year?  \n_Please allocate the probabilities in the cells corresponding to your beliefs._",
       "column_1": "Correlation",
       "column_2": "Probabilities",
@@ -159,16 +123,16 @@
       "max_value_graph": 1,
       "step_size_graph": 0.2,
       "major_value": "1.0",
-      "key": "data_editor11",
+      "key": "data_editor7",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question11",
       "effect_size": " "
     },
 
-    "question10": {
-      "question_number": "Question 10",
-      "key_form": "key_form10",
-      "title_question": "Question 10 - Correlation Between Effects of the Program in Another Country",
+    "question8": {
+      "question_number": "Question 8",
+      "key_form": "key_form8",
+      "title_question": "Question 8 - Correlation Between Effects of the Program in Another Country",
       "subtitle_question": "We would like you to express your beliefs about the **correlation** you would expect to see between effects of the program in your country and those in another country in the region.  \nA negative correlation (between -1 and 0) means that if a program has a negative impact somewhere else this makes it more likely it has a positive impact in your country.  \nA 0 correlation means no relationship between what you find elsewhere and what you expect to see in your country, while a positive correlation (between 0 and 1) means that a high impact somewhere else corresponds to also a high impact in your country. \n_Please allocate the probabilities in the cells corresponding to your beliefs._",
       "column_1": "Correlation",
       "column_2": "Probabilities",
@@ -177,7 +141,7 @@
       "max_value_graph": 1,
       "step_size_graph": 0.2,
       "major_value": "1.0",
-      "key": "data_editor10",
+      "key": "data_editor8",
       "title_barchart": "Distribution of your Beliefs",
       "num_input_question": "num_input_question10",
       "effect_size": "*Based on your previous answers, we would like to understand the minimum correlation you would need to see in order to consider scaling up this program to more firms.*\n\n- What is the smallest correlation value (between -1 and 1) that would convince you to expand this program? Please provide a value, or simply skip this question if you do not want to answer."
