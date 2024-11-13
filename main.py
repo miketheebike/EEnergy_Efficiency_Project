@@ -1,21 +1,11 @@
-import streamlit as st
+#import streamlit as st
 import json
 from fixed_components import *
 from changing_components import *
 import numpy as np
 
-# st.set_page_config(layout="wide")
-st.set_page_config(
-    page_title="Ex-stream-ly Cool App",
-    page_icon="🧊",
-    layout="central",
-    initial_sidebar_state="auto",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
-)
+st.set_page_config(layout="wide")
+
 
 # Read the JSON file
 config = json.load(open('config.json'))
