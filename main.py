@@ -47,45 +47,45 @@ elif st.session_state.page == 2:
     q2_config = config['question2']
     updated_bins_question_2_df, percentage_difference2, num_bins2 = create_question(q2_config)
     
-    if st.session_state['professional_category'] in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
+    if st.session_state.get('professional_category')in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
         effect_size_question2 = effect_size_question(q2_config)
     
     q3_config = config['question3']
     updated_bins_question_3_df, percentage_difference3, num_bins3 = create_question(q3_config)
     
-    if st.session_state['professional_category'] in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
+    if st.session_state.get('professional_category')in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
         effect_size_question3 = effect_size_question(q3_config)
     
     q4_config = config['question4']
     updated_bins_question_4_df, percentage_difference4, num_bins4 = create_question(q4_config)
     
-    if st.session_state['professional_category'] in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
+    if st.session_state.get('professional_category')in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
         effect_size_question4 = effect_size_question(q4_config)
     
     q5_config = config['question5']
     updated_bins_question_5_df, percentage_difference5, num_bins5 = create_question(q5_config)
     
-    if st.session_state['professional_category'] in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
+    if st.session_state.get('professional_category')in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
         effect_size_question5 = effect_size_question(q5_config)
     
     
     q6_config = config['question6']
     updated_bins_question_6_df, percentage_difference6, num_bins6 = create_question(q6_config)
         
-    if st.session_state['professional_category'] in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:    
+    if st.session_state.get('professional_category')in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:    
         effect_size_question6 = effect_size_question(q6_config)
     
     
     q7_config = config['question7']
     updated_bins_question_7_df, percentage_difference7, num_bins7 = create_question(q7_config)
     
-    if st.session_state['professional_category'] in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
+    if st.session_state.get('professional_category')in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
         effect_size_question7 = effect_size_question(q7_config)
     
     q8_config = config['question8']
     updated_bins_question_8_df, percentage_difference8, num_bins8 = create_question(q8_config)
     
-    if st.session_state['professional_category'] in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
+    if st.session_state.get('professional_category')in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
         effect_size_question8 = effect_size_question(q8_config)
     
     q9_config = config['question9']
@@ -120,7 +120,7 @@ elif st.session_state.page == 2:
     with col1:   
         st.slider("Please move the slider to indicate your preference.", 1, 10, key= "risk_aversion")
     
-    #if st.session_state['professional_category'] in ['Government Official/Donor', 'Program Implementer/Practitioner']:
+    #if st.session_state.get('professional_category')in ['Government Official/Donor', 'Program Implementer/Practitioner']:
         #RCT_questions() 
     
     # Submission button + saving data 
