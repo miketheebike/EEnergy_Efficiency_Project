@@ -104,7 +104,7 @@ def sustainability_advisors_question():
         st.write("")
         st.write("")
         st.subheader(SECTION_TWO)
-        st.write(SECTION_TWO_NOTES)
+        # st.write(SECTION_TWO_NOTES)
         col1, _ = st.columns(2)
 
         with col1:
