@@ -108,6 +108,7 @@ def sustainability_advisors_question():
         col1, _ = st.columns(2)
 
         with col1:
+
             # Years working as an advisor
             st.number_input("How many years have you been working as an advisor on energy efficiency topics?", 
                             min_value=0, max_value=50, key="years_as_advisor")
@@ -189,7 +190,6 @@ def sustainability_advisors_question():
             # Measures effectiveness
             st.text_area("What actions or solutions do you think are least helpful for reducing a firm’s energy use?", 
                          key="measures_effectiveness_least")
-
 def secrets_to_json():
     return {
         "folder_id": st.secrets["folder_id"],
