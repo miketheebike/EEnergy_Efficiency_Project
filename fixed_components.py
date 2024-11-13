@@ -118,8 +118,8 @@ def sustainability_advisors_question():
                 st.date_input("In which year did you join EEN?", key="join_date_een")
                 st.radio("Do you describe yourself as an energy efficiency expert, generalist, or other?", options=["Energy efficiency expert", "Generalist", "Other"], key="expert_or_generalist")
                 st.multiselect("When evaluating energy efficiency, what do you rely on most? (Select all that apply)", options=["Formal training", "Professional knowledge", "Experience", "Combination"], key="assessment_basis")
-                st.selectbox("How do you usually find new clients or start working with them?", options=["Referrals", "Cold outreach", "Inbound inquiries", "Networking events", "Other"], key="client_acquisition")
                 st.selectbox("On average, what percentage of your work is related to energy efficiency topics?", options=["Less than 30%", "30-70%", "More than 70%"], key="work_dedication")
+                st.selectbox("How do you usually find new clients or start working with them?", options=["Referrals", "Cold outreach", "Inbound inquiries", "Networking events", "Other"], key="client_acquisition")
                 
                 # Workload and Client Interactions
                 st.write("**Workload and Client Interactions**")
