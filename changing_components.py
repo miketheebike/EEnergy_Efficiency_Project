@@ -22,6 +22,10 @@ def initialize_session_state():
         st.session_state['consent'] = False
         st.session_state['submit'] = False
         st.session_state['No answer'] = ''
+                
+    # Initialize session state for page navigation
+    if "page" not in st.session_state:
+        st.session_state.page = 1
     
     if 'data' not in st.session_state:
         st.session_state['data'] = {
