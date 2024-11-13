@@ -30,7 +30,7 @@ if st.session_state.page == 1:
 
     next_page()
     
-if st.session_state.page == 2:
+elif st.session_state.page == 2:
     
     instructions()
 
