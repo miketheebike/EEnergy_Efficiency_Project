@@ -229,6 +229,7 @@ def instructions():
     st.write(CAPTION_INSTRUCTIONS)
 
     with plot:
+        config = {'displayModeBar': False}
         fig = go.Figure()
         fig.add_trace(go.Bar(
             x=values_column, 
@@ -270,7 +271,7 @@ def instructions():
         width = 400,# Adjust width here
         height = 400
         )
-        st.plotly_chart(fig)
+        st.plotly_chart(fig, config=config)
     
 def submit(): 
     st.session_state['submit'] = True
