@@ -30,7 +30,7 @@ def consent_form():
 def personal_information():
     col1, _ = st.columns(2)
     with col1:
-        st.text_input("Please, enter your full name and surname:", key = 'user_full_name')
+        st.text_input("Please, enter your full name:", key = 'user_full_name')
         st.text_input("Please, enter your working title:", key = 'user_position')
         st.selectbox('Please, specify your professional category:', ('Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor', 'Entrepreneur/Firm Representative'), key="professional_category")
         st.number_input(
