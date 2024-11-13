@@ -25,7 +25,7 @@ def initialize_session_state():
                 
     # Initialize session state for page navigation
     if "page" not in st.session_state:
-        st.session_state.page = 1
+        st.session_state.page = 0
     
     if 'data' not in st.session_state:
         st.session_state['data'] = {
