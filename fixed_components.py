@@ -42,11 +42,12 @@ SECTION_ONE = '''Section 1: Background Information'''
 def personal_information():
     st.subheader(SECTION_ONE)
     col1, _ = st.columns(2)
+    st.button("Next", on_click=next_page)
     with col1:
         st.text_input("Please, enter your full name:", key = 'user_full_name')
         st.text_input("Please, enter your working title:", key = 'user_position')
         st.selectbox('Please, specify your professional category:', ('Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor', 'Entrepreneur/Firm Representative'), key="professional_category")
-        st.button("Next", on_click=next_page)
+        
 #         st.number_input(
 #     'Please, insert the years of experience you have working on energy efficiency:', 
 #     min_value=0.0, 
