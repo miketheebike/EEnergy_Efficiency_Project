@@ -28,7 +28,7 @@ elif st.session_state.page == 1:
     
     sustainability_advisors_question()
 
-    next_page()
+    st.button("Next", on_click=next_page)
     
 elif st.session_state.page == 2:
     
