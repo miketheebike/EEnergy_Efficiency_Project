@@ -110,7 +110,11 @@ def sustainability_advisors_question():
         with col1:
                 # Advisor Background and Experience
                 st.write("**Advisor Background and Experience**")
-                st.number_input("How many years have you been working as an advisor on energy efficiency topics?", min_value=0, max_value=50, key="years_as_advisor")
+                st.number_input("How many years have you been working as an advisor on energy efficiency topics?", 
+                    min_value=0.0, 
+                    step=0.5, 
+                    format="%.1f", 
+                    key='years_of_experience')
                 st.date_input("In which year did you join EEN?", key="join_date_een")
                 st.radio("Do you describe yourself as an energy efficiency expert, generalist, or other?", options=["Energy efficiency expert", "Generalist", "Other"], key="expert_or_generalist")
                 st.selectbox("How do you usually find new clients or start working with them?", options=["Referrals", "Cold outreach", "Inbound inquiries", "Networking events", "Other"], key="client_acquisition")
