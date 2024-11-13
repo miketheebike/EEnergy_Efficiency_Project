@@ -80,9 +80,9 @@ elif st.session_state.page == 2:
     updated_bins_question_7_df, percentage_difference7, num_bins7 = create_question(q7_config)
     #effect_size_question9 = effect_size_question(q9_config)
     
-    _, col2, _, _ = st.columns(2)
+    col2, _ = st.columns(2)
     with col2:
-        st.image("SatSunGraph.png", width = 700)
+        st.image("SatSunGraph.png", width = 500)
     st.write("Saturday and Sunday temperatures in Washington DC for each weekend in 2022. As we might expect, there is a strong correlation between the temperature on a Saturday and on the Sunday, since some parts of the year are hot, and others colder. The correlation here is 0.88.")
     
     q8_config = config['question8']
