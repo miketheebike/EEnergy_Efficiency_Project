@@ -20,12 +20,14 @@ if st.session_state.page == 0:
     if st.session_state['consent'] == True:
     
         personal_information()
-        
-        entrepreneur_firm_representative_question()
-        
-        sustainability_advisors_question()
 
-        st.button("Next", on_click=next_page)
+        if st.session_state.page == 0:
+        
+            entrepreneur_firm_representative_question()
+            
+            sustainability_advisors_question()
+    
+            st.button("Next", on_click=next_page)
     
 elif st.session_state.page == 2:
     
