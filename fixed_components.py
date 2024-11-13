@@ -46,7 +46,7 @@ def personal_information():
         st.text_input("Please, enter your full name:", key = 'user_full_name')
         st.text_input("Please, enter your working title:", key = 'user_position')
         st.selectbox('Please, specify your professional category:', ('Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor', 'Entrepreneur/Firm Representative'), key="professional_category")
-        
+        st.button("Next Page", on_click=next_page)
 #         st.number_input(
 #     'Please, insert the years of experience you have working on energy efficiency:', 
 #     min_value=0.0, 
