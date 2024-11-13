@@ -97,7 +97,7 @@ def entrepreneur_firm_representative_question():
 
 
 SECTION_TWO = '''Section 2: Understanding Your Work Context'''
-SECTION_TWO_NOTES = '''Before exploring your expectations, we would like to understand your recent work activities. Please answer based on your experiences in the past week (or a typical week if last week was unusual).'''
+SECTION_TWO_NOTES = '''Please answer based on your experiences in the past week (or a typical week if last week was unusual).'''
 
 def sustainability_advisors_question():
     if st.session_state['professional_category'] == 'Sustainability Advisor':
