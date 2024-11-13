@@ -11,11 +11,13 @@ config = json.load(open('config.json'))
 
 initialize_session_state()
 
-survey_title_subtitle(config['header'])
+if st.session_state.page == 0:
+    
+    survey_title_subtitle(config['header'])
+    
+    consent_form()
 
-consent_form()
-
-if st.session_state['consent']:
+if st.session_state['consent'] and st.session_state.page == 1:
 
     personal_information()
     
