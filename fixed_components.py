@@ -17,6 +17,7 @@ import plotly.graph_objs as go
 # Insert consent
 def add_consent():
     st.session_state['consent'] = True
+    next_page()    
 
 def consent_form():
     st.markdown("""
