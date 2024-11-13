@@ -118,11 +118,14 @@ def sustainability_advisors_question():
             # How do you acquire clients
             st.selectbox("How do you usually find new clients or start working with them?", 
                          options=["Referrals", "Cold outreach", "Inbound inquiries", "Networking events", "Other"], key="client_acquisition")
+
+            # Number of firms advised on sustainability practices
+            st.number_input("How many firms do you advise on sustainable development practices?", 
+                            min_value=0, step=1, key="num_firms_advised")
                 
             # Question 1: Firms consulted per week (broader workload question near the top)
             st.number_input("In the past week, how many firms have you advised on energy efficiency topics? (Please consider all clients, not just those within EEN.)", 
                             min_value=0, step=1, key="firms_consulted_pw")
-
 
             # Question 2: Hours spent per client (specific to each engagement)
             st.number_input("On average, how many hours do you spend working with each client on a project or service?", 
@@ -132,42 +135,25 @@ def sustainability_advisors_question():
             st.number_input("Based on your experience with the EENergy project, for how many of the 707 selected firms do you expect a reduction in energy use?", 
                 min_value=0, max_value=707, step=1, key="expected_reduction")
 
-            # Time spent advising for 10 clients
-            st.selectbox("For 10 of your clients, how much time do you typically spend giving advice on energy efficiency?", 
-                         options=["Less than 1 hour", "2-3 hours", "4-5 hours", "6+ hours"], key="time_spent_advising")
-
-
-
-
-
-
 
             # Description of a successful client engagement
             st.text_area("In your opinion, what makes working with a client successful?", 
                          key="good_engagement")
 
-
-
             # Energy efficiency expert or generalist
             st.radio("Do you describe yourself as an energy efficiency expert or a generalist?", 
                      options=["Energy efficiency expert", "Generalist"], key="expert_or_generalist")
 
-            # Basis of assessment (education or experience)
-            st.multiselect("When evaluating energy efficiency, do you rely on education, experience, or both? (Select all that apply)", 
-                           options=["Education", "Experience", "Both"], key="assessment_basis")
+            st.multiselect("When evaluating energy efficiency, do you rely on formal training, professional knowledge, experience, or a combination? (Select all that apply)", 
+                     options=["Formal training", "Professional knowledge", "Experience", "Combination"], key="assessment_basis")
 
             # Work dedication to the topic
             st.selectbox("On average, what percentage of your work is related to energy efficiency topics?", 
-                         options=["Less than 30%", "30-60%", "More than 60%"], key="work_dedication")
+                         options=["Less than 30%", "30-70%", "More than 70%"], key="work_dedication")
 
-            # Workload question
-            st.text_area("Please describe your workload when working on energy efficiency topics.", 
-                         key="workload_description")
 
             # Additional questions adapted for advisors from entrepreneur survey:
-            # Number of firms advised on sustainability practices
-            st.number_input("How many firms do you advise on sustainable development practices?", 
-                            min_value=0, step=1, key="num_firms_advised")
+
 
             # Frequency of meetings with firms
             st.selectbox("How often do you meet with the firms you advise?", 
