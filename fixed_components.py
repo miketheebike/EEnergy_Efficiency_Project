@@ -42,7 +42,6 @@ SECTION_ONE = '''Section 1: Background Information'''
 def personal_information():
     st.subheader(SECTION_ONE)
     col1, _ = st.columns(2)
-    st.button("Next", on_click=next_page)
     with col1:
         st.text_input("Please, enter your full name:", key = 'user_full_name')
         st.text_input("Please, enter your working title:", key = 'user_position')
