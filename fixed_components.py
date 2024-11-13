@@ -148,8 +148,11 @@ def sustainability_advisors_question():
                     ], 
                     key="meeting_topics_advisors"
                 )
-                st.radio("Overall, how would you rate the usefulness of your meetings for helping firms improve their sustainability practices?", options=["Very useful", "Somewhat useful", "Neutral", "Not very useful", "Not useful at all"], key="meeting_usefulness_advisors")
-                
+                st.radio(
+                    "How effective do you feel your meetings are in supporting firms to improve their sustainability practices?", 
+                    options=["Very effective", "Somewhat effective", "Neutral", "Not very effective", "Not effective at all"], 
+                    key="meeting_effectiveness_advisors"
+                )                
                 # Advice Given and Client Reactions
                 st.write("**Advice Given and Client Reactions**")
                 st.text_area("What advice have you given to firms that they have chosen to follow?", key="advice_followed_by_firms")
