@@ -82,7 +82,7 @@ elif st.session_state.page == 2:
     
     col2 = st.columns(1)
     with col2:
-        st.image("SatSunGraph.png", width = 500)
+        st.image("SatSunGraph.png", width = 300)
     st.write("Saturday and Sunday temperatures in Washington DC for each weekend in 2022. As we might expect, there is a strong correlation between the temperature on a Saturday and on the Sunday, since some parts of the year are hot, and others colder. The correlation here is 0.88.")
     
     q8_config = config['question8']
