@@ -26,9 +26,7 @@ def initialize_session_state():
     # Initialize session state for page navigation
     if "page" not in st.session_state:
         st.session_state.page = 0
-        
-    if "consent" not in st.session_state:
-    st.session_state.consent = False
+
     
     if 'data' not in st.session_state:
         st.session_state['data'] = {
