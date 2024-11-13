@@ -60,6 +60,7 @@ def entrepreneur_firm_representative_question():
     if st.session_state['professional_category'] == 'Entrepreneur/Firm Representative' and st.session_state.page == 1:
         st.write("")
         st.write("")
+        st.subheader(SECTION_ONE_CONT)
         st.write("Please answer the following if you are an Entrepreneur or Firm Representative.")
         col1, _ = st.columns(2)
 
@@ -113,7 +114,7 @@ def sustainability_advisors_question():
     if st.session_state['professional_category'] == 'Sustainability Advisor':
         st.write("")
         st.write("")
-        st.subheader(SECTION_TWO)
+        st.subheader(SECTION_ONE_CONT)
         # st.write(SECTION_TWO_NOTES)
         col1, _ = st.columns(2)
 
