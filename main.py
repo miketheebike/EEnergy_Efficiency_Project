@@ -104,7 +104,7 @@ elif st.session_state.page == 2:
     updated_bins_list = [updated_bins_question_1_df, updated_bins_question_2_df]#, updated_bins_question_3_df, updated_bins_question_4_df, updated_bins_question_5_df
     
     
-    st.subheader("Question 11 - Cost/Benefit Ratio")
+    st.subheader("Question 9 - Cost/Benefit Ratio")
     st.write("In simple terms, a cost-benefit ratio is used to compare the costs of a project against the benefits it delivers. For instance, if a program costs €100.000 and the monetized value of its benefits is €150.000, the cost-benefit ratio would be 1:1.5. This means that for every euro spent, the program delivers one and a half euro in benefits. A higher ratio indicates greater efficiency and value for money. This question prompts to consider the efficiency and economic justification for scaling a program, ensuring that the decision aligns with both fiscal responsibility and the desired impact. At what cost-benefit ratio would you consider scaling the EEnergy Efficiency Project?\n Consider “benefits” that occurred after two years of running the program and “costs” as the total expenses incurred to implement, operate, and maintain a program or project (including administration and overhead costs).")
     
     col1, _= st.columns(2)
@@ -113,7 +113,7 @@ elif st.session_state.page == 2:
         cost_benefit_list = [f"1:{round(i, 1)}" for i in np.arange(0.6, 3.1, .2)]
         st.select_slider("Please move the slider to indicate your preference.", cost_benefit_list, key = "cost_benefit")
     
-    st.subheader("Question 12 - Risk Aversion")
+    st.subheader("Question 10 - Risk Aversion")
     st.write("Rate your willingness to take risks in general on a 10-point scale, with 1 completely unwilling and 10 completely willing.")
     
     col1, _= st.columns(2)
