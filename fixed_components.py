@@ -37,7 +37,8 @@ def consent_form():
 
 
 SECTION_ONE = '''Section 1: Background Information'''
-
+SECTION_ONE_CONT = '''Section 1: Continued'''
+SECTION_TWO = '''Section 2: Program Expectations'''
 
 def personal_information():
     st.subheader(SECTION_ONE)
