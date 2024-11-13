@@ -74,22 +74,10 @@ elif st.session_state.page == 2:
         
     if st.session_state.get('professional_category')in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:    
         effect_size_question6 = effect_size_question(q6_config)
-    
+        
     
     q7_config = config['question7']
     updated_bins_question_7_df, percentage_difference7, num_bins7 = create_question(q7_config)
-    
-    if st.session_state.get('professional_category')in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
-        effect_size_question7 = effect_size_question(q7_config)
-    
-    q8_config = config['question8']
-    updated_bins_question_8_df, percentage_difference8, num_bins8 = create_question(q8_config)
-    
-    if st.session_state.get('professional_category')in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
-        effect_size_question8 = effect_size_question(q8_config)
-    
-    q9_config = config['question9']
-    updated_bins_question_9_df, percentage_difference9, num_bins9 = create_question(q9_config)
     #effect_size_question9 = effect_size_question(q9_config)
     
     _, col2, _, _ = st.columns(4)
@@ -97,8 +85,8 @@ elif st.session_state.page == 2:
         st.image("SatSunGraph.png", width = 700)
     st.write("Saturday and Sunday temperatures in Washington DC for each weekend in 2022. As we might expect, there is a strong correlation between the temperature on a Saturday and on the Sunday, since some parts of the year are hot, and others colder. The correlation here is 0.88.")
     
-    q10_config = config['question10']
-    updated_bins_question_10_df, percentage_difference10, num_bins10 = create_question(q10_config)    
+    q8_config = config['question8']
+    updated_bins_question_8_df, percentage_difference8, num_bins8 = create_question(q8_config)    
     
     percentage_differences = [percentage_difference1, percentage_difference2] #, percentage_difference3, percentage_difference4, percentage_difference5
     updated_bins_list = [updated_bins_question_1_df, updated_bins_question_2_df]#, updated_bins_question_3_df, updated_bins_question_4_df, updated_bins_question_5_df
