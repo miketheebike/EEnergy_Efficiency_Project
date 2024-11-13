@@ -97,7 +97,7 @@ def entrepreneur_firm_representative_question():
 
 
 SECTION_TWO = '''Section 2: Understanding Your Work Context'''
-SECTION_TWO_NOTES = '''Please answer based on your experiences in the past week (or a typical week if last week was unusual).'''
+SECTION_TWO_NOTES = '''Before we ask you about your expecataions, we would like to understand your work a bit better and will ask you about your last week. If the last week was not typical for your work (e.g., because you were on holidays), think of the week(s) before instead. The following questions will refer to this week, asking information that will allow us to better contextualize your expectations.'''
 
 def sustainability_advisors_question():
     if st.session_state['professional_category'] == 'Sustainability Advisor':
@@ -108,41 +108,45 @@ def sustainability_advisors_question():
         col1, _ = st.columns(2)
 
         with col1:
+            # Years working as an advisor
+            st.number_input("How many years have you been working as an advisor on energy efficiency topics?", 
+                            min_value=0, max_value=50, key="years_as_advisor")
+
+            # Year joined EEN with calendar widget
+            st.date_input("When did you join EEN?", key="join_date_een")
+                
+            # How do you acquire clients
+            st.selectbox("How do you usually find new clients or start working with them?", 
+                         options=["Referrals", "Cold outreach", "Inbound inquiries", "Networking events", "Other"], key="client_acquisition")
+                
             # Question 1: Firms consulted per week (broader workload question near the top)
-            st.number_input("How many firms do you work with in a typical week (including firms not part of EEN)?", 
+            st.number_input("In the past week, how many firms have you advised on energy efficiency topics? (Please consider all clients, not just those within EEN.)", 
                             min_value=0, step=1, key="firms_consulted_pw")
+
 
             # Question 2: Hours spent per client (specific to each engagement)
             st.number_input("On average, how many hours do you spend working with each client on a project or service?", 
                             min_value=0.0, step=0.5, key="working_hours")
 
-            # New Questions
-            # Expected improvement in energy efficiency
-            st.text_input("Based on your experience with the EENergy project, for how many firms do you expect a reduction in energy use? Please estimate the percentage (for example, 20%, 50%).", 
-                          key="expected_reduction")
+            # Expected number of firms with reduced energy use
+            st.number_input("Based on your experience with the EENergy project, for how many of the 707 selected firms do you expect a reduction in energy use?", 
+                min_value=0, max_value=707, step=1, key="expected_reduction")
 
             # Time spent advising for 10 clients
             st.selectbox("For 10 of your clients, how much time do you typically spend giving advice on energy efficiency?", 
                          options=["Less than 1 hour", "2-3 hours", "4-5 hours", "6+ hours"], key="time_spent_advising")
 
-            # How do you acquire clients
-            st.selectbox("How do you usually find new clients or start working with them?", 
-                         options=["Referrals", "Cold outreach", "Inbound inquiries", "Networking events", "Other"], key="client_acquisition")
 
-            # Years working as an advisor
-            st.number_input("How many years have you been working as an advisor on energy efficiency topics?", 
-                            min_value=0, max_value=50, key="years_as_advisor")
 
-            # Measures effectiveness
-            st.text_area("What actions or solutions do you think are most and least helpful for reducing a firm’s energy use?", 
-                         key="measures_effectiveness")
+
+
+
 
             # Description of a successful client engagement
             st.text_area("In your opinion, what makes working with a client successful?", 
                          key="good_engagement")
 
-            # Year joined EEN with calendar widget
-            st.date_input("When did you join EEN?", key="join_date_een")
+
 
             # Energy efficiency expert or generalist
             st.radio("Do you describe yourself as an energy efficiency expert or a generalist?", 
@@ -191,7 +195,14 @@ def sustainability_advisors_question():
 
             # Reasons for not following advice
             st.text_area("Why do you think firms chose not to follow your advice? (For example: financial costs, labor costs, or other reasons)", key="reasons_firms_not_following")
-
+                
+            # Measures effectiveness
+            st.text_area("What actions or solutions do you think are most helpful for reducing a firm’s energy use? (What might the success of an average firm depend on?)", 
+                         key="measures_effectiveness_most")
+                
+            # Measures effectiveness
+            st.text_area("What actions or solutions do you think are least helpful for reducing a firm’s energy use?", 
+                         key="measures_effectiveness_least")
 
 def secrets_to_json():
     return {
