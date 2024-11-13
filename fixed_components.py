@@ -26,6 +26,11 @@ def consent_form():
     if agree:
         st.markdown("You have consented. Select \"Next\" to start the survey.")
         st.button('Next', on_click=add_consent)
+            
+# Define a function to handle the Next button
+def next_page():
+    st.session_state.page += 1
+
 
 
 SECTION_ONE = '''Section 1: Background Information'''
