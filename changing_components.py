@@ -143,6 +143,9 @@ def create_question(jsonfile_name):
             # Extract the updated values from the second column
             updated_values = bins_grid[jsonfile_name['column_2']]
 
+            # Get rid of plot menu
+            config = {'displayModeBar': False}
+                    
             # Plot the updated values as a bar plot
             fig = go.Figure()
             fig.add_trace(go.Bar(
@@ -185,7 +188,7 @@ def create_question(jsonfile_name):
             width = 400,
             height = 400
             )
-            st.plotly_chart(fig)
+            st.plotly_chart(fig, config = config)
 
     return pd.DataFrame(bins_grid), percentage_difference, len(bins_grid)
 
