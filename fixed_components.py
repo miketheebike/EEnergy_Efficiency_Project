@@ -21,7 +21,7 @@ def add_consent():
 
 # Define a function to handle the Next button
 def next_page():
-    st.session_state.page += 1
+    st.session_state['page'] += 1
 
 
 def consent_form():
