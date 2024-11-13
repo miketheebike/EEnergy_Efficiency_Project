@@ -90,10 +90,15 @@ def entrepreneur_firm_representative_question():
 #                 st.text_input("On average, how many hours did you spend working for each client in total?", key = "working_hours")
 #                 st.text_input("How many firms they consult overall in a week (including firms outside of EEN)", key = "firms_consulted_pw")
 
+SECTION_ONE = '''Section 1: Background Information'''
+SECTION_ONE_NOTES = '''Before exploring your expectations, we would like to understand your recent work activities. Please answer based on your experiences in the past week (or a typical week if last week was unusual).'''
+
 def sustainability_advisors_question():
     if st.session_state['professional_category'] == 'Sustainability Advisor':
         st.write("")
         st.write("")
+        st.subheader(SECTION_ONE)
+        st.write(SECTION_ONE_NOTES)
         st.write("Please answer the following if you are a sustainability advisor.")
         col1, _ = st.columns(2)
 
