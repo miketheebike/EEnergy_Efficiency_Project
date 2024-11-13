@@ -267,7 +267,7 @@ def instructions():
                 mirror=True
             ),
             font=dict(color='white'),    # White font color for readability
-        width=500,  # Adjust width here
+        # Adjust width here
          
         )
         st.plotly_chart(fig)
