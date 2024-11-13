@@ -17,14 +17,19 @@ if st.session_state.page == 0:
     
     consent_form()
 
-if st.session_state['consent'] and st.session_state.page == 1:
+if st.session_state['consent'] :
 
     personal_information()
     
+    next_page()
+    
+if st.session_state.page == 1:
     entrepreneur_firm_representative_question()
     
     sustainability_advisors_question()
+    
 
+    
     instructions()
 
     q1_config = config['question1']
