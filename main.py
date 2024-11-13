@@ -21,14 +21,11 @@ if st.session_state.page == 0:
     
         personal_information()
         
-    
+        entrepreneur_firm_representative_question()
+        
+        sustainability_advisors_question()
 
-elif st.session_state.page == 1:
-    entrepreneur_firm_representative_question()
-    
-    sustainability_advisors_question()
-
-    st.button("Next", on_click=next_page)
+        st.button("Next", on_click=next_page)
     
 elif st.session_state.page == 2:
     
