@@ -182,6 +182,8 @@ def create_question(jsonfile_name):
                     mirror=True
                 ),
                 font=dict(color='white'),  # White font color for readability
+            width = 500,
+            height = 400
             )
             st.plotly_chart(fig)
 
