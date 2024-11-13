@@ -49,7 +49,7 @@ elif st.session_state.page == 2:
     q2_config = config['question2']
     updated_bins_question_2_df, percentage_difference2, num_bins2 = create_question(q2_config)
     
-    if st.session_state.get('professional_category') in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
+    if st.session_state.get('professional_category')in ['Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor']:
         effect_size_question2 = effect_size_question(q2_config)
     
     q3_config = config['question3']
