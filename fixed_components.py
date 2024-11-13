@@ -129,7 +129,21 @@ def sustainability_advisors_question():
                 st.write("**Client Engagement and Meeting Effectiveness**")
                 st.selectbox("How often do you meet with the firms you advise?", options=["Daily", "Weekly", "Monthly", "Quarterly", "Annually", "As needed"], key="meeting_frequency_advisors")
                 st.selectbox("How long are your typical meetings with the firms you advise?", options=["Less than 30 minutes", "30-60 minutes", "1-2 hours", "More than 2 hours"], key="meeting_duration_advisors")
-                st.text_area("What topics do you usually discuss during your meetings with firms?", key="meeting_topics_advisors")
+                # Updated question with multiple-choice selection
+                st.multiselect(
+                    "What topics do you usually discuss during your meetings with firms? (Select all that apply)", 
+                    options=[
+                        "Energy efficiency strategies",
+                        "Sustainable development practices",
+                        "Cost-saving measures",
+                        "Regulatory compliance",
+                        "Technology upgrades",
+                        "Employee training",
+                        "Environmental impact assessments",
+                        "Other"
+                    ], 
+                    key="meeting_topics_advisors"
+                )
                 st.radio("Overall, how would you rate the usefulness of your meetings for helping firms improve their sustainability practices?", options=["Very useful", "Somewhat useful", "Neutral", "Not very useful", "Not useful at all"], key="meeting_usefulness_advisors")
                 
                 # Advice Given and Client Reactions
