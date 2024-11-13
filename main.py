@@ -21,7 +21,7 @@ if st.session_state.page == 0:
     
         personal_information()
 
-        if st.session_state.page == 0:
+        if st.session_state.page == 1:
         
             entrepreneur_firm_representative_question()
             
