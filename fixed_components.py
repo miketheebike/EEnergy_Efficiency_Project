@@ -107,7 +107,7 @@ def entrepreneur_firm_representative_question():
 #                 st.text_input("How many firms they consult overall in a week (including firms outside of EEN)", key = "firms_consulted_pw")
 
 
-SECTION_TWO = '''Section 2: Understanding Your Work Context'''
+
 SECTION_TWO_NOTES = '''Before we ask you about your expecataions, we would like to understand your work a bit better and will ask you about your last week. If the last week was not typical for your work (e.g., because you were on holidays), think of the week(s) before instead. The following questions will refer to this week, asking information that will allow us to better contextualize your expectations.'''
 
 def sustainability_advisors_question():
