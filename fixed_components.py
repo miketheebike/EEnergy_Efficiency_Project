@@ -114,7 +114,7 @@ def sustainability_advisors_question():
                     min_value=0.0, 
                     step=0.5, 
                     format="%.1f", 
-                    key='years_of_experience')
+                    key='years_as_advisor')
                 st.date_input("In which year did you join EEN?", key="join_date_een")
                 st.radio("Do you describe yourself as an energy efficiency expert, generalist, or other?", options=["Energy efficiency expert", "Generalist", "Other"], key="expert_or_generalist")
                 st.selectbox("How do you usually find new clients or start working with them?", options=["Referrals", "Cold outreach", "Inbound inquiries", "Networking events", "Other"], key="client_acquisition")
