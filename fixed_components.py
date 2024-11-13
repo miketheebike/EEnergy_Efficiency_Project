@@ -19,6 +19,11 @@ def add_consent():
     st.session_state['consent'] = True
     #next_page()    
 
+# Define a function to handle the Next button
+def next_page():
+    st.session_state.page += 1
+
+
 def consent_form():
     st.markdown("""
     By submitting the form below you agree to your data being used for research purposes. 
@@ -28,9 +33,6 @@ def consent_form():
         st.markdown("You have consented. Select \"Next\" to start the survey.")
         st.button('Next', on_click=add_consent)
             
-# Define a function to handle the Next button
-def next_page():
-    st.session_state.page += 1
 
 
 
