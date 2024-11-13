@@ -29,7 +29,7 @@ elif st.session_state.page == 1:
 
     st.button("Next Page", on_click=next_page)
     
-elif st.session_state.page == 2:
+if st.session_state.page == 2:
     
     instructions()
 
