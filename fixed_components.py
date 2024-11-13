@@ -113,6 +113,7 @@ def sustainability_advisors_question():
                 st.number_input("How many years have you been working as an advisor on energy efficiency topics?", min_value=0, max_value=50, key="years_as_advisor")
                 st.date_input("In which year did you join EEN?", key="join_date_een")
                 st.radio("Do you describe yourself as an energy efficiency expert, generalist, or other?", options=["Energy efficiency expert", "Generalist", "Other"], key="expert_or_generalist")
+                st.selectbox("How do you usually find new clients or start working with them?", options=["Referrals", "Cold outreach", "Inbound inquiries", "Networking events", "Other"], key="client_acquisition")
                 st.multiselect("When evaluating energy efficiency, what do you rely on most? (Select all that apply)", options=["Formal training", "Professional knowledge", "Experience", "Combination"], key="assessment_basis")
                 st.selectbox("On average, what percentage of your work is related to energy efficiency topics?", options=["Less than 30%", "30-70%", "More than 70%"], key="work_dedication")
                 
@@ -121,7 +122,7 @@ def sustainability_advisors_question():
                 st.write("For the following questions, please reflect on your typical work with firms in the past week. If the last week was unusual (e.g., due to vacation), please consider a typical week instead.")
                 st.number_input("How many firms did you advise on energy efficiency topics in the past week (include all clients, not just those within EEN)?", min_value=0, step=1, key="firms_consulted_pw")
                 st.number_input("On average, how many hours do you spend working with each client on a project or service?", min_value=0.0, step=0.5, key="working_hours")
-                st.selectbox("How do you usually find new clients or start working with them?", options=["Referrals", "Cold outreach", "Inbound inquiries", "Networking events", "Other"], key="client_acquisition")
+
                 st.number_input("How many firms do you advise on sustainable development practices?", min_value=0, step=1, key="num_firms_advised")
                 
                 # Client Engagement and Meeting Effectiveness
