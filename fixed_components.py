@@ -27,9 +27,14 @@ def consent_form():
         st.markdown("You have consented. Select \"Next\" to start the survey.")
         st.button('Next', on_click=add_consent)
 
+
+SECTION_ONE = '''Section 1: Background Information'''
+
+
 def personal_information():
     col1, _ = st.columns(2)
     with col1:
+        st.subheader(SECTION_ONE)
         st.text_input("Please, enter your full name:", key = 'user_full_name')
         st.text_input("Please, enter your working title:", key = 'user_position')
         st.selectbox('Please, specify your professional category:', ('Policy implementer (EENergy consortium working package leaders)', 'Donor (European Commission)', 'Researcher', 'Sustainability Advisor', 'Entrepreneur/Firm Representative'), key="professional_category")
@@ -90,16 +95,17 @@ def entrepreneur_firm_representative_question():
 #                 st.text_input("On average, how many hours did you spend working for each client in total?", key = "working_hours")
 #                 st.text_input("How many firms they consult overall in a week (including firms outside of EEN)", key = "firms_consulted_pw")
 
-SECTION_ONE = '''Section 1: Background Information'''
-SECTION_ONE_NOTES = '''Before exploring your expectations, we would like to understand your recent work activities. Please answer based on your experiences in the past week (or a typical week if last week was unusual).'''
+
+SECTION_TWO = '''Section 2: Understanding Your Work Context'''
+SECTION_TWO_NOTES = '''Before exploring your expectations, we would like to understand your recent work activities. Please answer based on your experiences in the past week (or a typical week if last week was unusual).'''
 
 def sustainability_advisors_question():
     if st.session_state['professional_category'] == 'Sustainability Advisor':
         st.write("")
         st.write("")
-        st.subheader(SECTION_ONE)
-        st.write(SECTION_ONE_NOTES)
+        st.subheader(SECTION_TWO)
         st.write("Please answer the following if you are a sustainability advisor.")
+        st.write(SECTION_TWO_NOTES)
         col1, _ = st.columns(2)
 
         with col1:
