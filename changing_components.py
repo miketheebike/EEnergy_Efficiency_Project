@@ -18,23 +18,36 @@ import plotly.graph_objs as go
 
 def initialize_session_state():
     # Add custom CSS to disable horizontal scrolling
+    # Add custom CSS to prevent horizontal scrolling and reduce vertical spacing on mobile
     st.markdown(
         """
         <style>
-            /* Disable horizontal scrolling */
+            /* Prevent horizontal scrolling */
             body {
                 overflow-x: hidden;
             }
             
-            /* Ensure the main content doesn't exceed the screen width */
+            /* Ensure the main content doesn't exceed screen width */
             .main, .block-container {
                 max-width: 100vw;
                 overflow-x: hidden;
+            }
+    
+            /* Adjust spacing for mobile */
+            @media only screen and (max-width: 768px) {
+                .block-container {
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                }
+                .element-container {
+                    margin-bottom: 0.5rem;
+                }
             }
         </style>
         """,
         unsafe_allow_html=True
     )
+
 
     if 'key' not in st.session_state:
         st.session_state['key'] = 'value'
