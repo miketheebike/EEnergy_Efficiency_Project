@@ -271,7 +271,7 @@ def instructions():
         width = 350,# Adjust width here
         height = 400
         )
-        st.plotly_chart(fig, config=config)
+        st.plotly_chart(fig, use_container_width=True)
     
 def submit(): 
     st.session_state['submit'] = True
