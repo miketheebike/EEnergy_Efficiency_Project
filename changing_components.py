@@ -131,14 +131,14 @@ def create_question(jsonfile_name):
         with table:
             # Calculate the height based on the number of rows
             row_height = 35  # Adjust as necessary based on row size
-            table_height = (len(data)+1) * row_height
+            table_height = ((len(data)+1) * row_height) + 1
             # Display the data editor
             bins_grid = st.data_editor(data, 
                                        key=jsonfile_name['key'], 
                                        hide_index=True, 
                                        use_container_width=True, 
                                        disabled=[jsonfile_name['column_1']],
-                                       height = table_height+.1)
+                                       height = table_height)
 
             # Calculate the remaining percentage to be allocated
             percentage_difference = round(100 - sum(bins_grid[jsonfile_name['column_2']]))
