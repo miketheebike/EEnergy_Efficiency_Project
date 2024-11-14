@@ -214,6 +214,7 @@ def instructions():
     table, plot = st.columns([0.4, 0.6], gap = "large")
     
     with table:
+
         # Create some example data as a Pandas DataFrame
         values_column = ['< 20'] + list(range(21, 30)) + ['> 30']
         zeros_column = [0 for _ in values_column]
@@ -221,10 +222,13 @@ def instructions():
 
         data = {'Temperature': values_column, 'Probability': zeros_column}
         df = pd.DataFrame(data)
-
+        # Calculate the height based on the number of rows
+        row_height = 35  # Adjust as necessary based on row size
+        table_height = ((len(data)+1) * row_height) 
+        
         df['Temperature'] = df['Temperature'].astype('str')
     
-        st.data_editor(df, use_container_width=True, hide_index=True, disabled=('Temperature', "Probability"))
+        st.data_editor(df, use_container_width=True, hide_index=True, disabled=('Temperature', "Probability"), height=table_height)
 
     st.write(CAPTION_INSTRUCTIONS)
 
