@@ -138,7 +138,7 @@ def create_question(jsonfile_name):
                                        hide_index=True, 
                                        use_container_width=True, 
                                        disabled=[jsonfile_name['column_1']],
-                                       height = table_height)
+                                       height = table_height+.1)
 
             # Calculate the remaining percentage to be allocated
             percentage_difference = round(100 - sum(bins_grid[jsonfile_name['column_2']]))
