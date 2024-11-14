@@ -188,7 +188,7 @@ def create_question(jsonfile_name):
             width = 350,
             height = 400
             )
-            st.plotly_chart(fig, config = config)
+            st.plotly_chart(fig, config = config ,use_container_width=True)
 
     return pd.DataFrame(bins_grid), percentage_difference, len(bins_grid)
 
