@@ -229,7 +229,7 @@ def instructions():
     st.write(CAPTION_INSTRUCTIONS)
 
     with plot:
-        config = {'displayModeBar': False, "dragmode": False}
+        config = {'displayModeBar': False, "staticPlot": True }
         fig = go.Figure()
         fig.add_trace(go.Bar(
             x=values_column, 
