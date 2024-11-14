@@ -131,7 +131,7 @@ def create_question(jsonfile_name):
         with table:
             # Calculate the height based on the number of rows
             row_height = 35  # Adjust as necessary based on row size
-            table_height = ((len(data)+1) * row_height) + 1
+            table_height = ((len(data)+1) * row_height) 
             # Display the data editor
             bins_grid = st.data_editor(data, 
                                        key=jsonfile_name['key'], 
