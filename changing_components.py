@@ -144,7 +144,7 @@ def create_question(jsonfile_name):
             updated_values = bins_grid[jsonfile_name['column_2']]
 
             # Get rid of plot menu
-            config = {'displayModeBar': False, "dragmode": False}
+            config = {'displayModeBar': False, "staticPlot": True }
                     
             # Plot the updated values as a bar plot
             fig = go.Figure()
