@@ -17,6 +17,25 @@ from fixed_components import *
 import plotly.graph_objs as go
 
 def initialize_session_state():
+    # Add custom CSS to disable horizontal scrolling
+    st.markdown(
+        """
+        <style>
+            /* Disable horizontal scrolling */
+            body {
+                overflow-x: hidden;
+            }
+            
+            /* Ensure the main content doesn't exceed the screen width */
+            .main, .block-container {
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
     if 'key' not in st.session_state:
         st.session_state['key'] = 'value'
         st.session_state['consent'] = False
