@@ -224,7 +224,7 @@ def instructions():
         df = pd.DataFrame(data)
         # Calculate the height based on the number of rows
         row_height = 35  # Adjust as necessary based on row size
-        table_height = ((len(data)+1) * row_height) 
+        table_height = ((len(df)+1) * row_height) 
         
         df['Temperature'] = df['Temperature'].astype('str')
     
