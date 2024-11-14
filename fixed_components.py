@@ -265,8 +265,7 @@ def instructions():
                 showline=True,
                 linewidth=2,
                 linecolor='white',
-                mirror=True,
-                    fixedrange = True
+                mirror=True
             ),
             font=dict(color='white'),    # White font color for readability
         width = 350,# Adjust width here
