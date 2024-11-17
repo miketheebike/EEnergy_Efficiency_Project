@@ -175,24 +175,40 @@ def sustainability_advisors_question():
                 st.write("**Effectiveness and Expected Outcomes**")
                 st.number_input("Of the 707 firms selected for the EENergy project, how many do you expect will achieve a reduction in energy use?", min_value=0, max_value=707, step=1, key="expected_reduction")
                 st.text_area("In your opinion, what actions or solutions are most helpful for reducing a firm's energy use? (What might the success of an average firm depend on?)", key="measures_effectiveness_most")
-                st.text_area("In your opinion, what actions or solutions are least helpful for reducing a firm's energy use?", key="measures_effectiveness_least")
+#                 st.text_area("In your opinion, what actions or solutions are least helpful for reducing a firm's energy use?", key="measures_effectiveness_least")
+# def secrets_to_json():
+#     return {
+#         "folder_id": st.secrets["folder_id"],
+#         "type": st.secrets["type"],
+#         "project_id": st.secrets["project_id"],
+#         "private_key_id": st.secrets["private_key_id"],
+#         "private_key": st.secrets["private_key"],
+#         "client_email": st.secrets["client_email"],
+#         "client_id": st.secrets["client_id"],
+#         "auth_uri": st.secrets["auth_uri"],
+#         "token_uri": st.secrets["token_uri"],
+#         "auth_provider_x509_cert_url": st.secrets["auth_provider_x509_cert_url"],
+#         "client_x509_cert_url": st.secrets["client_x509_cert_url"],
+#         "universe_domain": st.secrets["universe_domain"],
+        
+#     }
+
 def secrets_to_json():
     return {
-        "folder_id": st.secrets["folder_id"],
-        "type": st.secrets["type"],
-        "project_id": st.secrets["project_id"],
-        "private_key_id": st.secrets["private_key_id"],
-        "private_key": st.secrets["private_key"],
-        "client_email": st.secrets["client_email"],
-        "client_id": st.secrets["client_id"],
-        "auth_uri": st.secrets["auth_uri"],
-        "token_uri": st.secrets["token_uri"],
-        "auth_provider_x509_cert_url": st.secrets["auth_provider_x509_cert_url"],
-        "client_x509_cert_url": st.secrets["client_x509_cert_url"],
-        "universe_domain": st.secrets["universe_domain"],
+        "folder_id": st.secrets1["folder_id"],
+        "type": st.secrets1["type"],
+        "project_id": st.secrets1["project_id"],
+        "private_key_id": st.secrets1["private_key_id"],
+        "private_key": st.secrets1["private_key"],
+        "client_email": st.secrets1["client_email"],
+        "client_id": st.secrets1["client_id"],
+        "auth_uri": st.secrets1["auth_uri"],
+        "token_uri": st.secrets1["token_uri"],
+        "auth_provider_x509_cert_url": st.secrets1["auth_provider_x509_cert_url"],
+        "client_x509_cert_url": st.secrets1["client_x509_cert_url"],
+        "universe_domain": st.secrets1["universe_domain"],
         
     }
-
 # EXAMPLE 
 
 TITLE_INSTRUCTIONS = '''Instructions'''
