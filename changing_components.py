@@ -310,7 +310,7 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     creds = ServiceAccountCredentials.from_json_keyfile_dict(secrets_to_json(), scope)
     client = gspread.authorize(creds)
  
-    sheet = client.open("EEnergy_Efficiency_Survey_Data").sheet1
+    sheet = client.open("EEN_Survey_Data").sheet1
 
     column_names_list = concatenated_df.columns.tolist()
     #column_names = sheet.append_row(column_names_list)
@@ -318,7 +318,7 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     sheet_row_update = sheet.append_rows(concatenated_df.values.tolist()) #.values.tolist())
     
     #Navigate to the folder in Google Drive. Copy the Folder ID found in the URL. This is everything that comes after “folder/” in the URL.
-    backup_sheet = client.create(f'Backup_{data[USER_FULL_NAME]}_{datetime.now()}', folder_id= secrets_to_json()['folder_id']).sheet1
-    backup_sheet = backup_sheet.append_rows(concatenated_df.values.tolist()) #(new_bins_df.iloc[:2].values.tolist())
+    #backup_sheet = client.create(f'Backup_{data[USER_FULL_NAME]}_{datetime.now()}', folder_id= secrets_to_json()['folder_id']).sheet1
+    #backup_sheet = backup_sheet.append_rows(concatenated_df.values.tolist()) #(new_bins_df.iloc[:2].values.tolist())
     #backup_sheet.share('', perm_type = 'user', role = 'writer')
 
