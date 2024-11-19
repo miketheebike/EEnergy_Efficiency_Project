@@ -185,11 +185,11 @@ def sustainability_advisors_question():
             #     ], 
             #     key="meeting_topics_advisors"
             # )
-            st.radio(
-                "How effective do you feel your meetings are in supporting firms to improve their sustainability practices?", 
-                options=["Very effective", "Somewhat effective", "Neutral", "Not very effective", "Not effective at all"], 
-                key="meeting_effectiveness_advisors"
-            )                
+            # st.radio(
+            #     "How effective do you feel your meetings are in supporting firms to improve their sustainability practices?", 
+            #     options=["Very effective", "Somewhat effective", "Neutral", "Not very effective", "Not effective at all"], 
+            #     key="meeting_effectiveness_advisors"
+            # )                
             # Shortened technology names
             technologies = [
                 "Renewable Energy (PV Panels)",
