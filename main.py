@@ -13,25 +13,23 @@ config = json.load(open('config.json'))
 
 initialize_session_state()
 
-if st.session_state.page == 0:
-    
-    survey_title_subtitle(config['header'])
-    
-    consent_form()
 
-    if st.session_state['consent'] == True:
     
-        personal_information()
+survey_title_subtitle(config['header'])
 
-elif st.session_state.page == 1:
+consent_form()
 
-    entrepreneur_firm_representative_question()
+if st.session_state['consent'] == True:
+
+    personal_information()
+
+    #entrepreneur_firm_representative_question()
     
     sustainability_advisors_question()
 
-    st.button("Next Page", on_click=next_page)
+    #st.button("Next Page", on_click=next_page)
     
-elif st.session_state.page == 2:
+
     st.subheader(SECTION_TWO)
     instructions()
 
