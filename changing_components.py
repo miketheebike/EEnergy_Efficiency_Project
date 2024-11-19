@@ -102,8 +102,8 @@ def initialize_session_state():
             'Personal Hours Per Week': [],
             'Reasons for Following Advice': [],
             'Meeting Effectiveness': [],
-            'Technologies Table': [],
-            'Ranked Topics': []
+            #'Technologies Table': [],
+            #'Ranked Topics': []
         }
     
 def safe_var(key):
@@ -329,8 +329,8 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     PERSONAL_HOURS_PER_WEEK = "Personal Hours Per Week"
     REASONS_FOR_FOLLOWING = "Reasons for Following Advice"
     MEETING_EFFECTIVENESS = "Meeting Effectiveness"
-    TECHNOLOGIES_TABLE = "Technologies Table"
-    RANKED_TOPICS = "Ranked Topics"
+    #TECHNOLOGIES_TABLE = "Technologies Table"
+    #RANKED_TOPICS = "Ranked Topics"
 
     data[USER_FULL_NAME].append(safe_var('user_full_name'))
     data[USER_POSITION].append(safe_var('user_position'))
@@ -375,14 +375,14 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     data[PERSONAL_HOURS_PER_WEEK].append(safe_var('personal_hours_per_week'))
     data[REASONS_FOR_FOLLOWING].append(safe_var('reasons_for_firms_following'))
     data[MEETING_EFFECTIVENESS].append(safe_var('meeting_effectiveness_advisors'))
-    data[TECHNOLOGIES_TABLE].append(edited_df.to_dict())  # Save table as a dictionary
-    data[RANKED_TOPICS].append(ranked_topics)
+    #data[TECHNOLOGIES_TABLE].append(edited_df.to_dict())  # Save table as a dictionary
+    #data[RANKED_TOPICS].append(ranked_topics)
     # Save to session state
-    st.session_state['edited_df'] = edited_df
-    st.session_state['ranked_topics'] = ranked_topics
+    #st.session_state['edited_df'] = edited_df
+    #st.session_state['ranked_topics'] = ranked_topics
     st.session_state['data'] = data
-    edited_df = st.session_state['edited_df']
-    ranked_topics = st.session_state['ranked_topics']
+    #edited_df = st.session_state['edited_df']
+    #ranked_topics = st.session_state['ranked_topics']
     for key, value in data.items():
         st.write(f"{key}: Length = {len(value)}")
     session_state_df = pd.DataFrame(data)
