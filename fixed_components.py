@@ -135,7 +135,7 @@ def sustainability_advisors_question():
             
             # Workload and Client Interactions
             st.subheader("Workload and Client Interactions")
-            st.write("For the following questions, please reflect on your typical work within the past 6 months.
+            st.write("For the following questions, please reflect on your typical work within the past 6 months.")
             st.number_input("How many firms do you advise on energy efficiency topics in a typical work week? (include all clients, not just those within EEN)?", min_value=0, step=1, key="firms_consulted_pw")
             st.number_input("On average, how many hours in total do you spend working with each client on a project or service?", min_value=0.0, step=0.5, key="working_hours")
 
