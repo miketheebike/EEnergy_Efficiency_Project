@@ -88,7 +88,7 @@ def initialize_session_state():
             'Meeting Duration': [],
             'Topics Discussed': [],
             'Time Covered Rankings': [],
-            'Meeting Effectiveness': [],
+            #'Meeting Effectiveness': [],
             'Advice Followed by Firms': [],
             'Reasons Firms Followed Advice': [],
             'Advice Not Followed by Firms': [],
@@ -315,7 +315,7 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     MEETING_DURATION = 'Meeting Duration'
     TOPICS_DISCUSSED = 'Topics Discussed'
     TIME_COVERED_RANKINGS = 'Time Covered Rankings'
-    MEETING_EFFECTIVENESS = 'Meeting Effectiveness'
+    #MEETING_EFFECTIVENESS = 'Meeting Effectiveness'
     ADVICE_FOLLOWED = 'Advice Followed by Firms'
     REASONS_FOLLOWED = 'Reasons Firms Followed Advice'
     ADVICE_NOT_FOLLOWED = 'Advice Not Followed by Firms'
@@ -361,7 +361,7 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     data[MEETING_DURATION].append(safe_var('meeting_duration_advisors'))
     data[TOPICS_DISCUSSED].append(safe_var('meeting_topics_advisors'))
     data[TIME_COVERED_RANKINGS].append(safe_var('time_covered_ranking'))
-    data[MEETING_EFFECTIVENESS].append(safe_var('meeting_effectiveness_advisors'))
+    #data[MEETING_EFFECTIVENESS].append(safe_var('meeting_effectiveness_advisors'))
     data[ADVICE_FOLLOWED].append(safe_var('advice_followed_by_firms'))
     data[REASONS_FOLLOWED].append(safe_var('reasons_for_firms_following'))
     data[ADVICE_NOT_FOLLOWED].append(safe_var('advice_not_followed_by_firms'))
