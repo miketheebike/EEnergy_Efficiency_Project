@@ -299,7 +299,42 @@ def sustainability_advisors_question():
             st.number_input("Of the 707 firms selected for the EENergy project, how many do you expect will achieve a reduction in energy use?", min_value=0, max_value=707, step=1, key="expected_reduction")
             st.text_area("In your opinion, what actions or solutions are most helpful for reducing a firm's energy use? (What might the success of an average firm depend on?)", key="measures_effectiveness_most")
             st.text_area("In your opinion, what actions or solutions are least helpful for reducing a firm's energy use?", key="measures_effectiveness_least")
-
+            
+            # Add new questions
+            st.subheader("Additional Questions")
+            
+            # Question 1: Agreement on personnel training
+            st.radio(
+                "Please indicate agreement with the following statement: "
+                '"For energy efficiency investments to be successful, firms must usually undertake personnel training."',
+                options=[
+                    "1 - Largely disagree",
+                    "2 - Somewhat disagree",
+                    "3 - Neither agree nor disagree",
+                    "4 - Somewhat agree",
+                    "5 - Largely agree"
+                ],
+                key="personnel_training_agreement"
+            )
+            
+            # Question 2: Important investment criterion
+            st.radio(
+                "What criterion do you consider most important when recommending a particular investment?",
+                options=[
+                    "Payback time / Breakeven time",
+                    "Total cost savings, regardless of time",
+                    "Other (please specify)"
+                ],
+                key="important_investment_criterion"
+            )
+            
+            if st.session_state.get("important_investment_criterion") == "Other (please specify)":
+                st.text_input("Please specify the criterion:", key="investment_criterion_other")
+            
+            # Submission button (example)
+            if st.button("Submit"):
+                # Example processing logic
+                st.success("Thank you for submitting your responses!")
 
 def secrets_to_json():
     return {
