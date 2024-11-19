@@ -377,12 +377,16 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     data[MEETING_EFFECTIVENESS].append(safe_var('meeting_effectiveness_advisors'))
     data[TECHNOLOGIES_TABLE].append(edited_df.to_dict())  # Save table as a dictionary
     data[RANKED_TOPICS].append(ranked_topics)
-    
+    # Save to session state
+    st.session_state['edited_df'] = edited_df
+    st.session_state['ranked_topics'] = ranked_topics
     st.session_state['data'] = data
+    edited_df = st.session_state['edited_df']
+    ranked_topics = st.session_state['ranked_topics']
     for key, value in data.items():
         st.write(f"{key}: Length = {len(value)}")
-                
     session_state_df = pd.DataFrame(data)
+
     
     personal_data_df = session_state_df.iloc[:, :5]
     min_eff_df = session_state_df.iloc[:, 5:]
