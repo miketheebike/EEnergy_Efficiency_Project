@@ -401,7 +401,7 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     creds = ServiceAccountCredentials.from_json_keyfile_dict(secrets_to_json(), scope)
     client = gspread.authorize(creds)
  
-    sheet = client.open("EEnergy_Efficiency_Survey_Data").sheet1
+    sheet = client.open("EEN_Survey_Data").sheet1
 
     column_names_list = concatenated_df.columns.tolist()
     #column_names = sheet.append_row(column_names_list)
