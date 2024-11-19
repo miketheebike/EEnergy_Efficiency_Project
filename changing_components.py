@@ -56,9 +56,8 @@ def initialize_session_state():
         st.session_state['No answer'] = ''
         st.session_state['page'] = 0    
                 
-    # Initialize session state for page navigation
 
-    
+        
     if 'data' not in st.session_state:
         st.session_state['data'] = {
             'User Full Name': [],
@@ -74,10 +73,38 @@ def initialize_session_state():
             'Minimum Effect Size Q6': [],
             'Minimum Effect Size Q7': [],
             'Minimum Effect Size Q8': [],
-            #'Minimum Effect Size Q9': [],
+            # 'Minimum Effect Size Q9': [],
             'Cost-Benefit Ratio': [],
-            'Risk Aversion': []
-            }
+            'Risk Aversion': [],
+            # New keys for added questions
+            'Years as Advisor': [],
+            'Join Date EEN': [],
+            'Expert or Generalist': [],
+            'Work Dedication': [],
+            'Firms Consulted Per Week': [],
+            'Average Working Hours Per Client': [],
+            'Number of Firms Advised on Sustainability': [],
+            'Meeting Frequency': [],
+            'Meeting Duration': [],
+            'Topics Discussed': [],
+            'Time Covered Rankings': [],
+            'Meeting Effectiveness': [],
+            'Advice Followed by Firms': [],
+            'Reasons Firms Followed Advice': [],
+            'Advice Not Followed by Firms': [],
+            'Reasons Firms Did Not Follow Advice': [],
+            'Expected Reduction in Energy Use': [],
+            'Most Effective Measures': [],
+            'Least Effective Measures': [],
+            'Personal Hourly Fee': [],
+            'Firm Hourly Fee': [],
+            'Firm Hours Per Week': [],
+            'Personal Hours Per Week': [],
+            'Reasons for Following Advice': [],
+            'Meeting Effectiveness': [],
+            'Technologies Table': [],
+            'Ranked Topics': []
+        }
     
 def safe_var(key):
     if key in st.session_state:
@@ -234,6 +261,8 @@ def effect_size_question(jsonfile_name):
         st.markdown(jsonfile_name['effect_size'])
         st.text_input("Please insert a number or skip if you are unsure.", key = jsonfile_name['num_input_question'])
 
+
+
 def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updated_bins_question_3_df, updated_bins_question_4_df, updated_bins_question_5_df, updated_bins_question_6_df, updated_bins_question_7_df, updated_bins_question_8_df):
 
     updated_bins_list = [updated_bins_question_1_df, updated_bins_question_2_df, updated_bins_question_3_df, updated_bins_question_4_df, updated_bins_question_5_df, updated_bins_question_6_df, updated_bins_question_7_df, updated_bins_question_8_df]
@@ -274,6 +303,34 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     #MIN_EFF_SIZE_Q10 = 'Minimum Effect Size Q10'
     COST_BENEFIT_RATIO = 'Cost-Benefit Ratio'
     RISK_AVERSION = 'Risk Aversion'
+    # Define constants for the new fields
+    YEARS_AS_ADVISOR = 'Years as Advisor'
+    JOIN_DATE_EEN = 'Join Date EEN'
+    EXPERT_OR_GENERALIST = 'Expert or Generalist'
+    WORK_DEDICATION = 'Work Dedication'
+    FIRMS_CONSULTED_PW = 'Firms Consulted Per Week'
+    AVG_WORKING_HOURS_PER_CLIENT = 'Average Working Hours Per Client'
+    NUM_FIRMS_ADVISED = 'Number of Firms Advised on Sustainability'
+    MEETING_FREQUENCY = 'Meeting Frequency'
+    MEETING_DURATION = 'Meeting Duration'
+    TOPICS_DISCUSSED = 'Topics Discussed'
+    TIME_COVERED_RANKINGS = 'Time Covered Rankings'
+    MEETING_EFFECTIVENESS = 'Meeting Effectiveness'
+    ADVICE_FOLLOWED = 'Advice Followed by Firms'
+    REASONS_FOLLOWED = 'Reasons Firms Followed Advice'
+    ADVICE_NOT_FOLLOWED = 'Advice Not Followed by Firms'
+    REASONS_NOT_FOLLOWED = 'Reasons Firms Did Not Follow Advice'
+    EXPECTED_REDUCTION = 'Expected Reduction in Energy Use'
+    MOST_EFFECTIVE_MEASURES = 'Most Effective Measures'
+    LEAST_EFFECTIVE_MEASURES = 'Least Effective Measures'
+    PERSONAL_HOURLY_FEE = "Personal Hourly Fee"
+    FIRM_HOURLY_FEE = "Firm Hourly Fee"
+    FIRM_HOURS_PER_WEEK = "Firm Hours Per Week"
+    PERSONAL_HOURS_PER_WEEK = "Personal Hours Per Week"
+    REASONS_FOR_FOLLOWING = "Reasons for Following Advice"
+    MEETING_EFFECTIVENESS = "Meeting Effectiveness"
+    TECHNOLOGIES_TABLE = "Technologies Table"
+    RANKED_TOPICS = "Ranked Topics"
 
     data[USER_FULL_NAME].append(safe_var('user_full_name'))
     data[USER_POSITION].append(safe_var('user_position'))
@@ -292,7 +349,35 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     #data[MIN_EFF_SIZE_Q10].append(safe_var('num_input_question10'))
     data[COST_BENEFIT_RATIO].append(safe_var('cost_benefit'))
     data[RISK_AVERSION].append(safe_var('risk_aversion'))
-
+    # Append the new fields
+    data[YEARS_AS_ADVISOR].append(safe_var('years_as_advisor'))
+    data[JOIN_DATE_EEN].append(safe_var('join_date_een'))
+    data[EXPERT_OR_GENERALIST].append(safe_var('expert_or_generalist'))
+    data[WORK_DEDICATION].append(safe_var('work_dedication'))
+    data[FIRMS_CONSULTED_PW].append(safe_var('firms_consulted_pw'))
+    data[AVG_WORKING_HOURS_PER_CLIENT].append(safe_var('working_hours'))
+    data[NUM_FIRMS_ADVISED].append(safe_var('num_firms_advised'))
+    data[MEETING_FREQUENCY].append(safe_var('meeting_frequency_advisors'))
+    data[MEETING_DURATION].append(safe_var('meeting_duration_advisors'))
+    data[TOPICS_DISCUSSED].append(safe_var('meeting_topics_advisors'))
+    data[TIME_COVERED_RANKINGS].append(safe_var('time_covered_ranking'))
+    data[MEETING_EFFECTIVENESS].append(safe_var('meeting_effectiveness_advisors'))
+    data[ADVICE_FOLLOWED].append(safe_var('advice_followed_by_firms'))
+    data[REASONS_FOLLOWED].append(safe_var('reasons_for_firms_following'))
+    data[ADVICE_NOT_FOLLOWED].append(safe_var('advice_not_followed_by_firms'))
+    data[REASONS_NOT_FOLLOWED].append(safe_var('reasons_firms_not_following'))
+    data[EXPECTED_REDUCTION].append(safe_var('expected_reduction'))
+    data[MOST_EFFECTIVE_MEASURES].append(safe_var('measures_effectiveness_most'))
+    data[LEAST_EFFECTIVE_MEASURES].append(safe_var('measures_effectiveness_least'))
+    data[PERSONAL_HOURLY_FEE].append(safe_var('personal_hourly_fee'))
+    data[FIRM_HOURLY_FEE].append(safe_var('firm_hourly_fee'))
+    data[FIRM_HOURS_PER_WEEK].append(safe_var('firm_hours_per_week'))
+    data[PERSONAL_HOURS_PER_WEEK].append(safe_var('personal_hours_per_week'))
+    data[REASONS_FOR_FOLLOWING].append(safe_var('reasons_for_firms_following'))
+    data[MEETING_EFFECTIVENESS].append(safe_var('meeting_effectiveness_advisors'))
+    data[TECHNOLOGIES_TABLE].append(edited_df.to_dict())  # Save table as a dictionary
+    data[RANKED_TOPICS].append(ranked_topics)
+    
     st.session_state['data'] = data
     
     session_state_df = pd.DataFrame(data)
@@ -310,15 +395,16 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     creds = ServiceAccountCredentials.from_json_keyfile_dict(secrets_to_json(), scope)
     client = gspread.authorize(creds)
  
-    sheet = client.open("EEN_Survey_Data").sheet1
+    sheet = client.open("EEnergy_Efficiency_Survey_Data").sheet1
 
     column_names_list = concatenated_df.columns.tolist()
     #column_names = sheet.append_row(column_names_list)
 
     sheet_row_update = sheet.append_rows(concatenated_df.values.tolist()) #.values.tolist())
-    
+    # Format the current datetime as a string
+    current_time_str = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     #Navigate to the folder in Google Drive. Copy the Folder ID found in the URL. This is everything that comes after “folder/” in the URL.
-    #backup_sheet = client.create(f'Backup_{data[USER_FULL_NAME]}_{datetime.now()}', folder_id= secrets_to_json()['folder_id']).sheet1
+    #backup_sheet = client.create(f'Backup_{data[USER_FULL_NAME]}_{current_time_str}', folder_id= secrets_to_json()['folder_id']).sheet1
     #backup_sheet = backup_sheet.append_rows(concatenated_df.values.tolist()) #(new_bins_df.iloc[:2].values.tolist())
     #backup_sheet.share('', perm_type = 'user', role = 'writer')
 
