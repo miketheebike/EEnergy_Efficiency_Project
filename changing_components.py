@@ -375,8 +375,8 @@ def add_submission(updated_bins_question_1_df, updated_bins_question_2_df, updat
     data[PERSONAL_HOURS_PER_WEEK].append(safe_var('personal_hours_per_week'))
     data[REASONS_FOR_FOLLOWING].append(safe_var('reasons_for_firms_following'))
     data[MEETING_EFFECTIVENESS].append(safe_var('meeting_effectiveness_advisors'))
-    #data[TECHNOLOGIES_TABLE].append(edited_df.to_dict())  # Save table as a dictionary
-    #data[RANKED_TOPICS].append(ranked_topics)
+    data[TECHNOLOGIES_TABLE].append(edited_df.to_dict())  # Save table as a dictionary
+    data[RANKED_TOPICS].append(ranked_topics)
     
     st.session_state['data'] = data
     for key, value in data.items():
